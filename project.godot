@@ -11,5 +11,17 @@ config_version=5
 [application]
 
 config/name="SnowJamGame"
+run/main_scene="res://Scenes/Main.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=160
+window/size/viewport_height=90
+window/stretch/mode="canvas_items"
+window/stretch/scale_mode="integer"
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0

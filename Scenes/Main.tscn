@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://cnsrjtxu0trlu"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Label" type="Label" parent="."]
+offset_left = 67.0
+offset_top = 33.0
+offset_right = 107.0
+offset_bottom = 56.0
+rotation = -0.00374927
+text = "Test"
