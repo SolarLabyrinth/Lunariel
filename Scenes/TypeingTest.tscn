@@ -1,0 +1,46 @@
+[gd_scene load_steps=3 format=3 uid="uid://b7nwkaudy8b08"]
+
+[ext_resource type="Script" path="res://Scenes/typeing_test.gd" id="1_6w4ww"]
+[ext_resource type="FontFile" uid="uid://crkwqcajq021m" path="res://Assets/Kenney Blocks.ttf" id="3_yqw7p"]
+
+[node name="TypeingTest" type="Node2D"]
+script = ExtResource("1_6w4ww")
+
+[node name="TestText" type="RichTextLabel" parent="."]
+offset_left = 160.0
+offset_top = 34.0
+offset_right = 320.0
+offset_bottom = 60.0
+theme_override_colors/default_color = Color(0.941176, 0.964706, 0.941176, 1)
+theme_override_fonts/normal_font = ExtResource("3_yqw7p")
+text = "LOREM IPSUM DOLOR SIT AMET"
+scroll_active = false
+autowrap_mode = 0
+
+[node name="StaminaTextLabel" type="RichTextLabel" parent="."]
+offset_left = 3.0
+offset_right = 53.0
+offset_bottom = 13.0
+theme_override_colors/default_color = Color(0.941176, 0.964706, 0.941176, 1)
+theme_override_fonts/normal_font = ExtResource("3_yqw7p")
+theme_override_font_sizes/normal_font_size = 8
+text = "Stamina :"
+scroll_active = false
+autowrap_mode = 0
+
+[node name="StaminaValueLabel" type="RichTextLabel" parent="."]
+offset_left = 56.0
+offset_right = 85.0
+offset_bottom = 13.0
+theme_override_colors/default_color = Color(0.941176, 0.964706, 0.941176, 1)
+theme_override_fonts/normal_font = ExtResource("3_yqw7p")
+theme_override_font_sizes/normal_font_size = 8
+text = "4"
+scroll_active = false
+autowrap_mode = 0
+
+[node name="StaminaRegenTimer" type="Timer" parent="."]
+wait_time = 5.0
+autostart = true
+
+[connection signal="timeout" from="StaminaRegenTimer" to="." method="_on_stamina_regen_timer_timeout"]

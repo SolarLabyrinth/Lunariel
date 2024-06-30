@@ -1,11 +1,7 @@
-[gd_scene format=3 uid="uid://cnsrjtxu0trlu"]
+[gd_scene load_steps=2 format=3 uid="uid://cnsrjtxu0trlu"]
+
+[ext_resource type="PackedScene" uid="uid://b7nwkaudy8b08" path="res://Scenes/TypeingTest.tscn" id="1_p1htd"]
 
 [node name="Main" type="Node2D"]
 
-[node name="Label" type="Label" parent="."]
-offset_left = 67.0
-offset_top = 33.0
-offset_right = 107.0
-offset_bottom = 56.0
-rotation = -0.00374927
-text = "Test"
+[node name="TypeingTest" parent="." instance=ExtResource("1_p1htd")]
