@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="PlayerStats" load_steps=2 format=3 uid="uid://vfqyf33duvq1"]
+
+[ext_resource type="Script" path="res://Resources/player_stats.gd" id="1_lqrrj"]
+
+[resource]
+script = ExtResource("1_lqrrj")
+croc_count = 0
