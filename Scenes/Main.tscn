@@ -1,7 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://cnsrjtxu0trlu"]
+[gd_scene load_steps=4 format=3 uid="uid://cnsrjtxu0trlu"]
 
 [ext_resource type="PackedScene" uid="uid://b7nwkaudy8b08" path="res://Scenes/TypeingTest.tscn" id="1_p1htd"]
+[ext_resource type="PackedScene" uid="uid://cvrm00cnpi2do" path="res://Scenes/StatsScreen.tscn" id="2_fo76b"]
+[ext_resource type="Resource" uid="uid://vfqyf33duvq1" path="res://Resources/player_stats.tres" id="3_1tjs8"]
 
 [node name="Main" type="Node2D"]
 
 [node name="TypeingTest" parent="." instance=ExtResource("1_p1htd")]
+visible = false
+
+[node name="StatsScreen" parent="." instance=ExtResource("2_fo76b")]
+player_data = ExtResource("3_1tjs8")

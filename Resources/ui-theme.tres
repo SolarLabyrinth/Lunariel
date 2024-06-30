@@ -1,0 +1,8 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://bahunhngepcwh"]
+
+[ext_resource type="FontFile" uid="uid://crkwqcajq021m" path="res://Assets/Kenney Blocks.ttf" id="1_mnu7g"]
+
+[resource]
+Button/fonts/font = ExtResource("1_mnu7g")
+RichTextLabel/colors/default_color = Color(0.941176, 0.964706, 0.941176, 1)
+RichTextLabel/fonts/normal_font = ExtResource("1_mnu7g")

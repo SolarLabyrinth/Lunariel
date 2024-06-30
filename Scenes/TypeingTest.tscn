@@ -6,18 +6,37 @@
 [node name="TypeingTest" type="Node2D"]
 script = ExtResource("1_6w4ww")
 
-[node name="TestText" type="RichTextLabel" parent="."]
-offset_left = 160.0
-offset_top = 34.0
-offset_right = 320.0
-offset_bottom = 60.0
+[node name="StaminaRegenTimer" type="Timer" parent="."]
+wait_time = 5.0
+autostart = true
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(2, 2)
+
+[node name="TestText" type="RichTextLabel" parent="Control"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 2.15
+anchor_top = -0.875
+anchor_right = 2.15
+anchor_bottom = -0.875
+offset_left = 74.0
+offset_top = 70.0
+offset_right = 234.0
+offset_bottom = 96.0
 theme_override_colors/default_color = Color(0.941176, 0.964706, 0.941176, 1)
 theme_override_fonts/normal_font = ExtResource("3_yqw7p")
 text = "LOREM IPSUM DOLOR SIT AMET"
 scroll_active = false
 autowrap_mode = 0
+metadata/_edit_use_anchors_ = true
 
-[node name="StaminaTextLabel" type="RichTextLabel" parent="."]
+[node name="StaminaTextLabel" type="RichTextLabel" parent="Control"]
 offset_left = 3.0
 offset_right = 53.0
 offset_bottom = 13.0
@@ -27,8 +46,10 @@ theme_override_font_sizes/normal_font_size = 8
 text = "Stamina :"
 scroll_active = false
 autowrap_mode = 0
+metadata/_edit_use_anchors_ = true
 
-[node name="StaminaValueLabel" type="RichTextLabel" parent="."]
+[node name="StaminaValueLabel" type="RichTextLabel" parent="Control"]
+unique_name_in_owner = true
 offset_left = 56.0
 offset_right = 85.0
 offset_bottom = 13.0
@@ -38,9 +59,33 @@ theme_override_font_sizes/normal_font_size = 8
 text = "4"
 scroll_active = false
 autowrap_mode = 0
+metadata/_edit_use_anchors_ = true
 
-[node name="StaminaRegenTimer" type="Timer" parent="."]
-wait_time = 5.0
-autostart = true
+[node name="WPMTextLabel" type="RichTextLabel" parent="Control"]
+offset_left = 3.0
+offset_top = 10.0
+offset_right = 53.0
+offset_bottom = 23.0
+theme_override_colors/default_color = Color(0.941176, 0.964706, 0.941176, 1)
+theme_override_fonts/normal_font = ExtResource("3_yqw7p")
+theme_override_font_sizes/normal_font_size = 8
+text = "WPM :"
+scroll_active = false
+autowrap_mode = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="WPMValueLabel" type="RichTextLabel" parent="Control"]
+unique_name_in_owner = true
+offset_left = 34.0
+offset_top = 10.0
+offset_right = 63.0
+offset_bottom = 23.0
+theme_override_colors/default_color = Color(0.941176, 0.964706, 0.941176, 1)
+theme_override_fonts/normal_font = ExtResource("3_yqw7p")
+theme_override_font_sizes/normal_font_size = 8
+text = "10"
+scroll_active = false
+autowrap_mode = 0
+metadata/_edit_use_anchors_ = true
 
 [connection signal="timeout" from="StaminaRegenTimer" to="." method="_on_stamina_regen_timer_timeout"]

@@ -8,9 +8,9 @@ const base_char_width = 2 * base_space_width
 
 var running = true
 
-@onready var TEST_TEXT_LABEL: RichTextLabel = $TestText
-@onready var STAMINA_VALUE_LABEL: RichTextLabel = $StaminaValueLabel
-@onready var WPM_VALUE_LABEL: RichTextLabel = $WPMValue
+@onready var TEST_TEXT_LABEL: RichTextLabel = %TestText
+@onready var STAMINA_VALUE_LABEL: RichTextLabel = %StaminaValueLabel
+@onready var WPM_VALUE_LABEL: RichTextLabel = %WPMValueLabel
 
 @onready var stamina = 4:
 	get():

@@ -1,0 +1,83 @@
+[gd_scene load_steps=3 format=3 uid="uid://cvrm00cnpi2do"]
+
+[ext_resource type="Theme" uid="uid://bahunhngepcwh" path="res://Resources/ui-theme.tres" id="1_ev4kd"]
+[ext_resource type="Script" path="res://Scenes/stats_screen.gd" id="1_stej8"]
+
+[node name="StatsScreen" type="Node2D"]
+script = ExtResource("1_stej8")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 320.0
+offset_bottom = 180.0
+
+[node name="SpeedLabel" type="RichTextLabel" parent="Control"]
+layout_mode = 0
+offset_left = 6.0
+offset_right = 129.0
+offset_bottom = 28.0
+theme = ExtResource("1_ev4kd")
+text = "Speed :"
+
+[node name="StaminaLabel" type="RichTextLabel" parent="Control"]
+offset_left = 6.0
+offset_top = 20.0
+offset_right = 129.0
+offset_bottom = 48.0
+theme = ExtResource("1_ev4kd")
+text = "Stamina :"
+
+[node name="RegenLabel" type="RichTextLabel" parent="Control"]
+offset_left = 6.0
+offset_top = 40.0
+offset_right = 129.0
+offset_bottom = 68.0
+theme = ExtResource("1_ev4kd")
+text = "Regen :"
+
+[node name="SpeedValue" type="RichTextLabel" parent="Control"]
+unique_name_in_owner = true
+offset_left = 112.0
+offset_right = 129.0
+offset_bottom = 28.0
+theme = ExtResource("1_ev4kd")
+text = "1"
+
+[node name="StaminaValue" type="RichTextLabel" parent="Control"]
+unique_name_in_owner = true
+offset_left = 112.0
+offset_top = 20.0
+offset_right = 128.0
+offset_bottom = 48.0
+theme = ExtResource("1_ev4kd")
+text = "1"
+
+[node name="RegenValue" type="RichTextLabel" parent="Control"]
+unique_name_in_owner = true
+offset_left = 112.0
+offset_top = 40.0
+offset_right = 129.0
+offset_bottom = 68.0
+theme = ExtResource("1_ev4kd")
+text = "1"
+
+[node name="SpeedAddButton" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 130.0
+offset_top = 1.0
+offset_right = 150.0
+offset_bottom = 33.0
+theme = ExtResource("1_ev4kd")
+text = "+"
+
+[node name="SpeedSubButton" type="Button" parent="Control"]
+offset_left = 153.0
+offset_top = 1.0
+offset_right = 173.0
+offset_bottom = 33.0
+theme = ExtResource("1_ev4kd")
+text = "-"
+
+[connection signal="pressed" from="Control/SpeedAddButton" to="." method="_on_speed_add_button_pressed"]
+[connection signal="pressed" from="Control/SpeedSubButton" to="." method="_on_speed_sub_button_pressed"]
