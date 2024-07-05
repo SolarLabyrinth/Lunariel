@@ -5,4 +5,5 @@
 [resource]
 Button/fonts/font = ExtResource("1_mnu7g")
 RichTextLabel/colors/default_color = Color(0.941176, 0.964706, 0.941176, 1)
+RichTextLabel/fonts/mono_font = ExtResource("1_mnu7g")
 RichTextLabel/fonts/normal_font = ExtResource("1_mnu7g")

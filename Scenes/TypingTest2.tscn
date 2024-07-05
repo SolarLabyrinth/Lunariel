@@ -1,0 +1,160 @@
+[gd_scene load_steps=9 format=3 uid="uid://diaud7jodmuhs"]
+
+[ext_resource type="Script" path="res://Scenes/typing_test_2.gd" id="1_grd6q"]
+[ext_resource type="Theme" uid="uid://bahunhngepcwh" path="res://Resources/ui-theme.tres" id="2_taoin"]
+[ext_resource type="FontFile" uid="uid://crkwqcajq021m" path="res://Assets/Kenney Blocks.ttf" id="3_qk7ji"]
+[ext_resource type="Texture2D" uid="uid://cnfhvidjt6chd" path="res://Assets/sandglass.png" id="4_h2n2n"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c0mp7"]
+atlas = ExtResource("4_h2n2n")
+region = Rect2(0, 0, 33, 47)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o0uv8"]
+atlas = ExtResource("4_h2n2n")
+region = Rect2(33, 0, 33, 47)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rnkoe"]
+atlas = ExtResource("4_h2n2n")
+region = Rect2(66, 0, 33, 47)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_uxn13"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c0mp7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o0uv8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rnkoe")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="TypingTest2" type="Node2D"]
+script = ExtResource("1_grd6q")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+offset_left = 170.0
+offset_top = 106.0
+offset_right = 640.0
+offset_bottom = 360.0
+alignment = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="TestText" type="RichTextLabel" parent="VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("2_taoin")
+bbcode_enabled = true
+text = "By ancient light and purest flame,
+From shadow's grasp, I reclaim.
+Spirits of earth, air, water, and fire,
+Cleanse this place, lift the dire.
+From roots to leaves, night shall flee,
+Restore this forest, blessed be.
+Darkness gone, light’s embrace,
+Peace and life, now take their place."
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+
+[node name="StaminaRegenTimer" type="Timer" parent="."]
+wait_time = 5.0
+autostart = true
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 31.0
+offset_top = 43.0
+offset_right = 121.0
+offset_bottom = 57.0
+scale = Vector2(2, 2)
+
+[node name="StaminaTextLabel" type="RichTextLabel" parent="Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.075
+offset_left = 3.0
+offset_right = 53.0
+offset_bottom = 13.0
+theme_override_colors/default_color = Color(0.941176, 0.964706, 0.941176, 1)
+theme_override_fonts/normal_font = ExtResource("3_qk7ji")
+theme_override_font_sizes/normal_font_size = 8
+text = "Stamina :"
+scroll_active = false
+autowrap_mode = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="StaminaValueLabel" type="RichTextLabel" parent="Control"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 56.0
+offset_right = 85.0
+offset_bottom = 13.0
+theme_override_colors/default_color = Color(0.941176, 0.964706, 0.941176, 1)
+theme_override_fonts/normal_font = ExtResource("3_qk7ji")
+theme_override_font_sizes/normal_font_size = 8
+text = "4"
+scroll_active = false
+autowrap_mode = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 194.0
+offset_top = 12.0
+offset_right = 600.0
+offset_bottom = 120.0
+theme = ExtResource("2_taoin")
+theme_override_font_sizes/normal_font_size = 32
+bbcode_enabled = true
+text = "Type The Ritual Incantation:"
+fit_content = true
+scroll_active = false
+
+[node name="Control2" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 23.0
+offset_top = 116.0
+offset_right = 63.0
+offset_bottom = 156.0
+scale = Vector2(4, 4)
+
+[node name="TimeRemainingValue" type="RichTextLabel" parent="Control2"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -1.48403
+anchor_top = 6.30804
+anchor_right = -1.48403
+anchor_bottom = 6.30804
+offset_left = 72.1111
+offset_top = -252.571
+offset_right = 101.111
+offset_bottom = -239.571
+theme_override_colors/default_color = Color(0.941176, 0.964706, 0.941176, 1)
+theme_override_fonts/normal_font = ExtResource("3_qk7ji")
+theme_override_font_sizes/normal_font_size = 8
+text = "48"
+scroll_active = false
+autowrap_mode = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Control2"]
+position = Vector2(18.75, 32.25)
+sprite_frames = SubResource("SpriteFrames_uxn13")
+autoplay = "default"
+
+[connection signal="timeout" from="StaminaRegenTimer" to="." method="_on_stamina_regen_timer_timeout"]

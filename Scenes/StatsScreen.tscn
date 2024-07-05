@@ -11,6 +11,7 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 320.0
 offset_bottom = 180.0
+scale = Vector2(2, 2)
 
 [node name="SpeedLabel" type="RichTextLabel" parent="Control"]
 layout_mode = 0
@@ -21,6 +22,7 @@ theme = ExtResource("1_ev4kd")
 text = "Speed :"
 
 [node name="StaminaLabel" type="RichTextLabel" parent="Control"]
+layout_mode = 0
 offset_left = 6.0
 offset_top = 20.0
 offset_right = 129.0
@@ -29,6 +31,7 @@ theme = ExtResource("1_ev4kd")
 text = "Stamina :"
 
 [node name="RegenLabel" type="RichTextLabel" parent="Control"]
+layout_mode = 0
 offset_left = 6.0
 offset_top = 40.0
 offset_right = 129.0
@@ -38,6 +41,7 @@ text = "Regen :"
 
 [node name="SpeedValue" type="RichTextLabel" parent="Control"]
 unique_name_in_owner = true
+layout_mode = 0
 offset_left = 112.0
 offset_right = 129.0
 offset_bottom = 28.0
@@ -46,6 +50,7 @@ text = "1"
 
 [node name="StaminaValue" type="RichTextLabel" parent="Control"]
 unique_name_in_owner = true
+layout_mode = 0
 offset_left = 112.0
 offset_top = 20.0
 offset_right = 128.0
@@ -55,6 +60,7 @@ text = "1"
 
 [node name="RegenValue" type="RichTextLabel" parent="Control"]
 unique_name_in_owner = true
+layout_mode = 0
 offset_left = 112.0
 offset_top = 40.0
 offset_right = 129.0
@@ -63,6 +69,7 @@ theme = ExtResource("1_ev4kd")
 text = "1"
 
 [node name="SpeedAddButton" type="Button" parent="Control"]
+unique_name_in_owner = true
 layout_mode = 0
 offset_left = 130.0
 offset_top = 1.0
@@ -72,6 +79,8 @@ theme = ExtResource("1_ev4kd")
 text = "+"
 
 [node name="SpeedSubButton" type="Button" parent="Control"]
+unique_name_in_owner = true
+layout_mode = 0
 offset_left = 153.0
 offset_top = 1.0
 offset_right = 173.0
@@ -79,5 +88,100 @@ offset_bottom = 33.0
 theme = ExtResource("1_ev4kd")
 text = "-"
 
+[node name="StaminaAddButton" type="Button" parent="Control"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 132.0
+offset_top = 35.0
+offset_right = 152.0
+offset_bottom = 67.0
+theme = ExtResource("1_ev4kd")
+text = "+"
+
+[node name="StaminaSubButton" type="Button" parent="Control"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 156.0
+offset_top = 37.0
+offset_right = 176.0
+offset_bottom = 69.0
+theme = ExtResource("1_ev4kd")
+text = "-"
+
+[node name="RegenAddButton" type="Button" parent="Control"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 132.0
+offset_top = 71.0
+offset_right = 152.0
+offset_bottom = 103.0
+theme = ExtResource("1_ev4kd")
+text = "+"
+
+[node name="RegenSubButton" type="Button" parent="Control"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 156.0
+offset_top = 73.0
+offset_right = 176.0
+offset_bottom = 105.0
+theme = ExtResource("1_ev4kd")
+text = "-"
+
+[node name="AddXPButton" type="Button" parent="Control"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 6.0
+offset_top = 142.0
+offset_right = 79.0
+offset_bottom = 174.0
+theme = ExtResource("1_ev4kd")
+text = "Add XP"
+
+[node name="XPLabel" type="RichTextLabel" parent="Control"]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 60.0
+offset_right = 45.0
+offset_bottom = 88.0
+theme = ExtResource("1_ev4kd")
+text = "XP :"
+scroll_active = false
+
+[node name="XPValue" type="RichTextLabel" parent="Control"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 48.0
+offset_top = 60.0
+offset_right = 121.0
+offset_bottom = 88.0
+theme = ExtResource("1_ev4kd")
+text = "0"
+
+[node name="LevelLabel" type="RichTextLabel" parent="Control"]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 80.0
+offset_right = 81.0
+offset_bottom = 108.0
+theme = ExtResource("1_ev4kd")
+text = "Level :"
+scroll_active = false
+
+[node name="Levelvalue" type="RichTextLabel" parent="Control"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 84.0
+offset_top = 80.0
+offset_right = 127.0
+offset_bottom = 108.0
+theme = ExtResource("1_ev4kd")
+text = "1"
+
 [connection signal="pressed" from="Control/SpeedAddButton" to="." method="_on_speed_add_button_pressed"]
 [connection signal="pressed" from="Control/SpeedSubButton" to="." method="_on_speed_sub_button_pressed"]
+[connection signal="pressed" from="Control/StaminaAddButton" to="." method="_on_stamina_add_button_pressed"]
+[connection signal="pressed" from="Control/StaminaSubButton" to="." method="_on_stamina_sub_button_pressed"]
+[connection signal="pressed" from="Control/RegenAddButton" to="." method="_on_regen_add_button_pressed"]
+[connection signal="pressed" from="Control/RegenSubButton" to="." method="_on_regen_sub_button_pressed"]
+[connection signal="pressed" from="Control/AddXPButton" to="." method="_on_add_xp_button_pressed"]
