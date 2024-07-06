@@ -12,7 +12,6 @@ player_data = ExtResource("3_1tjs8")
 
 [node name="TypingTest2" parent="." instance=ExtResource("4_l272c")]
 position = Vector2(0, -1)
-player_data = ExtResource("3_1tjs8")
 wpm = 90
 test_text = "By ancient light and purest flame,
 From shadow's grasp, I reclaim.

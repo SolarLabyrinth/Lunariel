@@ -40,3 +40,15 @@ class_name PlayerStats extends Resource
 		if newValue != wpm_adjustment:
 			wpm_adjustment = value
 			changed.emit()
+
+@export var test_wpm := 70
+@export var test_xp_value := 1
+@export var test_text := """test"""
+#@export var test_text := """By ancient light and purest flame,
+#From shadow's grasp, I reclaim.
+#Spirits of earth, air, water, and fire,
+#Cleanse this place, lift the dire.
+#From roots to leaves, night shall flee,
+#Restore this forest, blessed be.
+#Darkness gone, light’s embrace,
+#Peace and life, now take their place."""

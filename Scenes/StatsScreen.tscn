@@ -178,6 +178,15 @@ offset_bottom = 108.0
 theme = ExtResource("1_ev4kd")
 text = "1"
 
+[node name="AddXPButton2" type="Button" parent="Control"]
+unique_name_in_owner = true
+offset_left = 220.5
+offset_top = 134.5
+offset_right = 293.5
+offset_bottom = 166.5
+theme = ExtResource("1_ev4kd")
+text = "Start"
+
 [connection signal="pressed" from="Control/SpeedAddButton" to="." method="_on_speed_add_button_pressed"]
 [connection signal="pressed" from="Control/SpeedSubButton" to="." method="_on_speed_sub_button_pressed"]
 [connection signal="pressed" from="Control/StaminaAddButton" to="." method="_on_stamina_add_button_pressed"]
@@ -185,3 +194,4 @@ text = "1"
 [connection signal="pressed" from="Control/RegenAddButton" to="." method="_on_regen_add_button_pressed"]
 [connection signal="pressed" from="Control/RegenSubButton" to="." method="_on_regen_sub_button_pressed"]
 [connection signal="pressed" from="Control/AddXPButton" to="." method="_on_add_xp_button_pressed"]
+[connection signal="pressed" from="Control/AddXPButton2" to="." method="_on_add_xp_button_2_pressed"]

@@ -1,6 +1,6 @@
 extends Node2D
 
-const TYPING_TEST = preload("res://Scenes/TypeingTest.tscn")
+const TYPING_TEST = preload("res://Scenes/TypingTest2.tscn")
 const STATS_SCREEN = preload("res://Scenes/StatsScreen.tscn")
 
 func start_typing_test() -> void:

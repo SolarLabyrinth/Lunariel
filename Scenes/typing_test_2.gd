@@ -4,10 +4,10 @@ extends Node2D
 @onready var STAMINA_VALUE_LABEL: RichTextLabel = %StaminaValueLabel
 @onready var time_remaining_value: RichTextLabel = %TimeRemainingValue
 
-@export var player_data: PlayerStats
-@export var wpm := 70
-@export var xp_value := 1
-@export_multiline var test_text := ''
+var player_data: PlayerStats = ResourceLoader.load("res://Resources/player_stats.tres")
+@export var wpm := player_data.test_wpm
+@export var xp_value := player_data.test_xp_value
+@export_multiline var test_text := player_data.test_text
 
 signal test_over(success: bool)
 
