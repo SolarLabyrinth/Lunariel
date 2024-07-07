@@ -13,6 +13,7 @@
 [node name="Door" parent="." instance=ExtResource("2_vlcq0")]
 position = Vector2(32, 236)
 target_level_id = 2
+target_side = 1
 
 [node name="Enemy" parent="." instance=ExtResource("3_satr7")]
 position = Vector2(276, 268)

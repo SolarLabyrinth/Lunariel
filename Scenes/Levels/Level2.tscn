@@ -14,6 +14,7 @@ script = ExtResource("1_wv4bw")
 [node name="Door" parent="." instance=ExtResource("2_dpmdo")]
 position = Vector2(32, 236)
 target_level_id = 1
+target_side = 1
 
 [node name="Door2" parent="." instance=ExtResource("2_dpmdo")]
 position = Vector2(431, 236)

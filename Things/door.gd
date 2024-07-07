@@ -1,8 +1,11 @@
 class_name Door extends Node2D
 
+enum Side { Left, Right }
+
 @export var target_level_id := 0
-@export var target_player_x := 0
-@export var target_player_face := 0
+@export var target_side := Side.Left
+# @export var target_player_x := 0
+# @export var target_player_face := 0
 @export var lock := 0
 
 @onready var interaction_label: RichTextLabel = %InteractionLabel
@@ -41,6 +44,12 @@ func _on_area_2d_area_exited(_area: Area2D) -> void:
 
 func _input(_event: InputEvent) -> void:
 	if is_activatable and Input.is_action_just_pressed('sl_interact'):
+		if target_side == Side.Left:
+			world_stats.player_x = 100.0
+			world_stats.player_face = 'right'
+		else:
+			world_stats.player_x = 540.0
+			world_stats.player_face = 'left'
 		SceneManager.show_level(target_level_id)
 		pass
 	pass
