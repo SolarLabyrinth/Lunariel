@@ -18,7 +18,7 @@ class_name WorldStats extends Resource
 
 func reset_enemies() -> Dictionary:
     return {
-        1: false,
+        1: true,
         2: true,
         3: true,
         4: true,

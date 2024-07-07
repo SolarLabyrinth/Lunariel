@@ -7,6 +7,8 @@ var world_stats: WorldStats = ResourceLoader.load("res://Resources/world_stats.t
 func _ready() -> void:
 	if world_stats.enemies.get(enemy_id):
 		show()
+	else:
+		hide()
 
 func _on_area_2d_area_entered(_area: Area2D) -> void:
 	world_stats.current_enemy_id = enemy_id
