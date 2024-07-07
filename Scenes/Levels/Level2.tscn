@@ -11,14 +11,15 @@ script = ExtResource("1_wv4bw")
 
 [node name="Floor" parent="." instance=ExtResource("2_p00eh")]
 
-[node name="Player" parent="." instance=ExtResource("1_3ey2r")]
-position = Vector2(217, 252)
-
 [node name="Door" parent="." instance=ExtResource("2_dpmdo")]
 position = Vector2(32, 236)
+target_level_id = 1
 
 [node name="Door2" parent="." instance=ExtResource("2_dpmdo")]
 position = Vector2(608, 236)
 
 [node name="Enemy" parent="." instance=ExtResource("3_pf2h0")]
 position = Vector2(385, 268)
+
+[node name="Player" parent="." instance=ExtResource("1_3ey2r")]
+position = Vector2(217, 252)

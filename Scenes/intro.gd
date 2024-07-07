@@ -17,7 +17,7 @@ func _ready() -> void:
 	pass
 
 func _input(event: InputEvent) -> void:
-	if event.is_action("ui_accept") and !event.is_echo() and event.is_pressed():
+	if (event.is_action("ui_accept") or event.is_action("sl_left_mouse")) and !event.is_echo() and event.is_pressed():
 		var new_text = intro_text.pop_front()
 		if new_text:
 			text.text = new_text

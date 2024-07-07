@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://dr71kej45meo"]
+[gd_scene load_steps=5 format=3 uid="uid://dr71kej45meo"]
 
 [ext_resource type="Texture2D" uid="uid://6x75b45f4vsp" path="res://Assets/main-spritesheet.png" id="1_3aeif"]
+[ext_resource type="Script" path="res://Things/enemy.gd" id="1_apwp6"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qlc8h"]
 radius = 76.0
@@ -10,6 +11,7 @@ atlas = ExtResource("1_3aeif")
 region = Rect2(96, 16, 16, 16)
 
 [node name="Enemy" type="Node2D"]
+script = ExtResource("1_apwp6")
 
 [node name="Area2D" type="Area2D" parent="."]
 
@@ -19,3 +21,6 @@ shape = SubResource("CircleShape2D_qlc8h")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(4, 4)
 texture = SubResource("AtlasTexture_rr2rk")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]
