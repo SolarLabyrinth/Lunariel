@@ -11,12 +11,14 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	if Input.is_action_pressed("ui_left"):
-		global_position.x -= speed * delta
+		var new_pos = clampf(global_position.x - speed * delta, 0.0, 640.0)
+		global_position.x = new_pos
 		face('left')
 		world_stats.player_x = global_position.x
 		world_stats.player_face = 'left'
 	if Input.is_action_pressed("ui_right"):
-		global_position.x += speed * delta
+		var new_pos = clampf(global_position.x + speed * delta, 0.0, 640.0)
+		global_position.x = new_pos
 		face('right')
 		world_stats.player_x = global_position.x
 		world_stats.player_face = 'right'
