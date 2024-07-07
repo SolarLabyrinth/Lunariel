@@ -5,3 +5,5 @@ class_name WorldStats extends Resource
 @export var player_face := 'right'
 @export var at_grace := false
 @export var at_door := false
+
+@export var keys := { 1: false, 2: false }

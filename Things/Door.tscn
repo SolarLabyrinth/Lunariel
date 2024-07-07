@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://b3ut4j5jl2dct"]
+[gd_scene load_steps=7 format=3 uid="uid://b3ut4j5jl2dct"]
 
 [ext_resource type="Script" path="res://Things/door.gd" id="1_i5vur"]
 [ext_resource type="Texture2D" uid="uid://6x75b45f4vsp" path="res://Assets/main-spritesheet.png" id="1_je343"]
@@ -12,6 +12,10 @@ height = 192.76
 atlas = ExtResource("1_je343")
 region = Rect2(0, 0, 16, 32)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_jvo5v"]
+atlas = ExtResource("1_je343")
+region = Rect2(51, 18, 10, 13)
+
 [node name="Door" type="Node2D"]
 script = ExtResource("1_i5vur")
 
@@ -23,6 +27,13 @@ shape = SubResource("CapsuleShape2D_nd685")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(4, 4)
 texture = SubResource("AtlasTexture_4rbhi")
+
+[node name="Lock" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+visible = false
+position = Vector2(0, -98)
+scale = Vector2(4, 4)
+texture = SubResource("AtlasTexture_jvo5v")
 
 [node name="InteractionLabel" type="RichTextLabel" parent="."]
 unique_name_in_owner = true
