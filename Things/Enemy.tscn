@@ -24,4 +24,3 @@ scale = Vector2(4, 4)
 texture = SubResource("AtlasTexture_rr2rk")
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
-[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]
