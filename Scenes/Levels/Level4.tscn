@@ -19,6 +19,7 @@ position = Vector2(349, 268)
 
 [node name="Key" parent="." instance=ExtResource("5_rrmxv")]
 position = Vector2(584, 268)
+key_id = 1
 
 [node name="Player" parent="." instance=ExtResource("4_280mj")]
 position = Vector2(122, 252)

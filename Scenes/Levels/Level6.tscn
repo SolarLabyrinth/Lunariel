@@ -19,6 +19,7 @@ target_level_id = 5
 
 [node name="Key" parent="." instance=ExtResource("4_py58y")]
 position = Vector2(60, 266)
+key_id = 2
 
 [node name="Player" parent="." instance=ExtResource("4_wah20")]
 position = Vector2(523, 252)
