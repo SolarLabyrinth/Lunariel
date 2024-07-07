@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://bvl874wa3nmyj"]
+
+[ext_resource type="Texture2D" uid="uid://6x75b45f4vsp" path="res://Assets/main-spritesheet.png" id="1_elvnv"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mtx85"]
+atlas = ExtResource("1_elvnv")
+region = Rect2(0, 96, 160, 16)
+
+[node name="Floor" type="Sprite2D"]
+position = Vector2(320, 328)
+scale = Vector2(4, 4)
+texture = SubResource("AtlasTexture_mtx85")

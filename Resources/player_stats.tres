@@ -4,6 +4,11 @@
 
 [resource]
 script = ExtResource("1_lqrrj")
+level = 1
+xp = 0
 stamina_regen = 1
 stamina_amount = 1
 wpm_adjustment = 1
+test_wpm = 70
+test_xp_value = 1
+test_text = "test"

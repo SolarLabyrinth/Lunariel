@@ -32,6 +32,7 @@ offset_right = 369.0
 offset_bottom = 170.0
 
 [node name="RichTextLabel" type="RichTextLabel" parent="StartButton"]
+layout_mode = 0
 offset_top = -12.0
 offset_right = 120.0
 offset_bottom = 36.0

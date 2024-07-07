@@ -1,6 +1,7 @@
 extends Node2D
 
 @export var player_data: PlayerStats = ResourceLoader.load("res://Resources/player_stats.tres")
+var world_stats: WorldStats = ResourceLoader.load("res://Resources/world_stats.tres")
 
 @onready var speed_value: RichTextLabel = %SpeedValue
 @onready var stamina_value: RichTextLabel = %StaminaValue
@@ -61,7 +62,5 @@ func _on_regen_sub_button_pressed() -> void:
 func _on_add_xp_button_pressed() -> void:
 	player_data.xp += 1
 
-
 func _on_add_xp_button_2_pressed() -> void:
-	SceneManager.start_typing_test()
-	pass # Replace with function body.
+	SceneManager.show_level(world_stats.current_level)

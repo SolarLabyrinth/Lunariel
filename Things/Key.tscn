@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://dkj31suye1iqr"]
+
+[ext_resource type="Texture2D" uid="uid://6x75b45f4vsp" path="res://Assets/main-spritesheet.png" id="1_68h0i"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jr7qq"]
+radius = 76.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r0hrw"]
+atlas = ExtResource("1_68h0i")
+region = Rect2(68, 18, 8, 13)
+
+[node name="Key" type="Node2D"]
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_jr7qq")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(4, 4)
+texture = SubResource("AtlasTexture_r0hrw")

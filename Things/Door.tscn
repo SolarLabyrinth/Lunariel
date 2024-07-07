@@ -1,0 +1,39 @@
+[gd_scene load_steps=6 format=3 uid="uid://b3ut4j5jl2dct"]
+
+[ext_resource type="Script" path="res://Things/door.gd" id="1_i5vur"]
+[ext_resource type="Texture2D" uid="uid://6x75b45f4vsp" path="res://Assets/main-spritesheet.png" id="1_je343"]
+[ext_resource type="Theme" uid="uid://bahunhngepcwh" path="res://Resources/ui-theme.tres" id="3_3dvsw"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_sqsto"]
+radius = 76.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4rbhi"]
+atlas = ExtResource("1_je343")
+region = Rect2(0, 0, 16, 32)
+
+[node name="Door" type="Node2D"]
+script = ExtResource("1_i5vur")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_sqsto")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(4, 4)
+texture = SubResource("AtlasTexture_4rbhi")
+
+[node name="InteractionLabel" type="RichTextLabel" parent="."]
+unique_name_in_owner = true
+visible = false
+offset_left = -10.0
+offset_top = -86.0
+offset_right = 37.0
+offset_bottom = -37.0
+theme = ExtResource("3_3dvsw")
+theme_override_font_sizes/normal_font_size = 32
+text = "E"
+fit_content = true
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]

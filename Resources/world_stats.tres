@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="WorldStats" load_steps=2 format=3 uid="uid://cf6rk47xkj378"]
+
+[ext_resource type="Script" path="res://Resources/world_stats.gd" id="1_f8e6y"]
+
+[resource]
+script = ExtResource("1_f8e6y")
+current_level = 0
+player_x = 0

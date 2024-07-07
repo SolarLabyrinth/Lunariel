@@ -180,6 +180,7 @@ text = "1"
 
 [node name="AddXPButton2" type="Button" parent="Control"]
 unique_name_in_owner = true
+layout_mode = 0
 offset_left = 220.5
 offset_top = 134.5
 offset_right = 293.5
