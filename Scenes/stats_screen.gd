@@ -63,4 +63,4 @@ func _on_add_xp_button_pressed() -> void:
 	player_data.xp += 1
 
 func _on_add_xp_button_2_pressed() -> void:
-	SceneManager.show_level(world_stats.current_level)
+	SceneManager.go_back_to_previous_grace()

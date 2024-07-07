@@ -21,6 +21,7 @@ enemy_id = 4
 
 [node name="Grace" parent="." instance=ExtResource("4_nvnbx")]
 position = Vector2(204, 270)
+level_id = 5
 
 [node name="Door2" parent="." instance=ExtResource("2_y8f50")]
 position = Vector2(608, 236)
