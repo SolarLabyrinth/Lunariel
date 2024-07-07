@@ -1,12 +1,38 @@
-[gd_scene load_steps=3 format=3 uid="uid://bvl874wa3nmyj"]
+[gd_scene load_steps=4 format=3 uid="uid://bvl874wa3nmyj"]
 
 [ext_resource type="Texture2D" uid="uid://6x75b45f4vsp" path="res://Assets/main-spritesheet.png" id="1_elvnv"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rsf1c"]
+atlas = ExtResource("1_elvnv")
+region = Rect2(0, 36, 29, 44)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mtx85"]
 atlas = ExtResource("1_elvnv")
 region = Rect2(0, 96, 160, 16)
 
-[node name="Floor" type="Sprite2D"]
+[node name="Node2D" type="Node2D"]
+
+[node name="Tree" type="Sprite2D" parent="."]
+position = Vector2(149, 216)
+scale = Vector2(4, 4)
+texture = SubResource("AtlasTexture_rsf1c")
+
+[node name="Tree2" type="Sprite2D" parent="."]
+position = Vector2(269, 216)
+scale = Vector2(4, 4)
+texture = SubResource("AtlasTexture_rsf1c")
+
+[node name="Tree3" type="Sprite2D" parent="."]
+position = Vector2(390, 216)
+scale = Vector2(4, 4)
+texture = SubResource("AtlasTexture_rsf1c")
+
+[node name="Tree4" type="Sprite2D" parent="."]
+position = Vector2(505, 216)
+scale = Vector2(4, 4)
+texture = SubResource("AtlasTexture_rsf1c")
+
+[node name="Floor" type="Sprite2D" parent="."]
 position = Vector2(320, 328)
 scale = Vector2(4, 4)
 texture = SubResource("AtlasTexture_mtx85")

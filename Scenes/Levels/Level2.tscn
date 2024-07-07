@@ -16,10 +16,15 @@ position = Vector2(32, 236)
 target_level_id = 1
 
 [node name="Door2" parent="." instance=ExtResource("2_dpmdo")]
-position = Vector2(608, 236)
+position = Vector2(431, 236)
+target_level_id = 7
 
 [node name="Enemy" parent="." instance=ExtResource("3_pf2h0")]
-position = Vector2(385, 268)
+position = Vector2(276, 268)
+
+[node name="Door3" parent="." instance=ExtResource("2_dpmdo")]
+position = Vector2(608, 236)
+target_level_id = 3
 
 [node name="Player" parent="." instance=ExtResource("1_3ey2r")]
-position = Vector2(217, 252)
+position = Vector2(122, 252)

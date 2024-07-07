@@ -1,3 +1,28 @@
-[gd_scene format=3 uid="uid://d3viiet6ymq0c"]
+[gd_scene load_steps=6 format=3 uid="uid://d3viiet6ymq0c"]
+
+[ext_resource type="PackedScene" uid="uid://bvl874wa3nmyj" path="res://Things/floor.tscn" id="1_ws5u3"]
+[ext_resource type="PackedScene" uid="uid://b3ut4j5jl2dct" path="res://Things/Door.tscn" id="2_vlcq0"]
+[ext_resource type="PackedScene" uid="uid://dr71kej45meo" path="res://Things/Enemy.tscn" id="3_satr7"]
+[ext_resource type="PackedScene" uid="uid://c31pd0pwwwyci" path="res://Things/Grace.tscn" id="4_rp4xi"]
+[ext_resource type="PackedScene" uid="uid://bytubugb5uuw3" path="res://Things/Player.tscn" id="5_2fvii"]
 
 [node name="Level3" type="Node2D"]
+
+[node name="Floor" parent="." instance=ExtResource("1_ws5u3")]
+
+[node name="Door" parent="." instance=ExtResource("2_vlcq0")]
+position = Vector2(32, 236)
+target_level_id = 2
+
+[node name="Enemy" parent="." instance=ExtResource("3_satr7")]
+position = Vector2(276, 268)
+
+[node name="Grace" parent="." instance=ExtResource("4_rp4xi")]
+position = Vector2(447, 270)
+
+[node name="Door2" parent="." instance=ExtResource("2_vlcq0")]
+position = Vector2(608, 236)
+target_level_id = 4
+
+[node name="Player" parent="." instance=ExtResource("5_2fvii")]
+position = Vector2(122, 252)

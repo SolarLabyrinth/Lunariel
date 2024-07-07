@@ -15,7 +15,6 @@ const levels = [
 	preload("res://Scenes/Levels/Level6.tscn"),
 	preload("res://Scenes/Levels/Level7.tscn"),
 	preload("res://Scenes/Levels/Level8.tscn"),
-	preload("res://Scenes/Levels/Level9.tscn"),
 ]
 
 func start_typing_test() -> void:
@@ -25,6 +24,6 @@ func show_stats_screen() -> void:
 func play_intro() -> void:
 	get_tree().change_scene_to_packed(INTRO)
 func show_level(level: int) -> void:
-	if(level >= 1 and level <= 9):
+	if(level >= 1 and level <= levels.size()):
 		world_stats.current_level = level
 		get_tree().change_scene_to_packed(levels[level-1])
