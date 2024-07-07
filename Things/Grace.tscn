@@ -4,8 +4,9 @@
 [ext_resource type="Script" path="res://Things/grace.gd" id="1_j3yya"]
 [ext_resource type="Theme" uid="uid://bahunhngepcwh" path="res://Resources/ui-theme.tres" id="3_pe4ru"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_3o3lf"]
-radius = 53.0
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_iqggd"]
+radius = 38.71
+height = 125.27
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_e0ham"]
 atlas = ExtResource("1_hphua")
@@ -17,7 +18,7 @@ script = ExtResource("1_j3yya")
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-shape = SubResource("CircleShape2D_3o3lf")
+shape = SubResource("CapsuleShape2D_iqggd")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(4, 4)

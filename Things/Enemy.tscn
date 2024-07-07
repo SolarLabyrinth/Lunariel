@@ -3,8 +3,9 @@
 [ext_resource type="Texture2D" uid="uid://6x75b45f4vsp" path="res://Assets/main-spritesheet.png" id="1_3aeif"]
 [ext_resource type="Script" path="res://Things/enemy.gd" id="1_apwp6"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_qlc8h"]
-radius = 76.0
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cxxf2"]
+radius = 48.28
+height = 173.12
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rr2rk"]
 atlas = ExtResource("1_3aeif")
@@ -16,7 +17,7 @@ script = ExtResource("1_apwp6")
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-shape = SubResource("CircleShape2D_qlc8h")
+shape = SubResource("CapsuleShape2D_cxxf2")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(4, 4)
