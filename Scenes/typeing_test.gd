@@ -1,6 +1,6 @@
 extends Node2D
 
-@export var player_data: PlayerStats = ResourceLoader.load("res://Resources/player_stats.tres")
+var player_data: PlayerStats = ResourceLoader.load("res://Resources/player_stats.tres")
 
 @export var words_per_minute = 70
 @export var text = "By ancient light and purest flame, From shadow's grasp, I reclaim. Spirits of earth, air, water, and fire, Cleanse this place, lift the dire. From roots to leaves, night shall flee, Restore this forest, blessed be. Darkness gone, light’s embrace, Peace and life, now take their place."

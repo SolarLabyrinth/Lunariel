@@ -1,7 +1,7 @@
 extends Node2D
 
-@export var player_data: PlayerStats = ResourceLoader.load("res://Resources/player_stats.tres")
-var world_stats: WorldStats = ResourceLoader.load("res://Resources/world_stats.tres")
+var player_data: PlayerStats = preload("res://Resources/player_stats.tres")
+var world_stats: WorldStats = preload("res://Resources/world_stats.tres")
 
 @onready var speed_value: RichTextLabel = %SpeedValue
 @onready var stamina_value: RichTextLabel = %StaminaValue
@@ -10,6 +10,8 @@ var world_stats: WorldStats = ResourceLoader.load("res://Resources/world_stats.t
 @onready var levelvalue: RichTextLabel = %Levelvalue
 
 func _ready() -> void:
+	print(player_data)
+	print(world_stats)
 	update_ui()
 	player_data.changed.connect(update_ui)
 	

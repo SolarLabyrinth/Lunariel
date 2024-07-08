@@ -5,11 +5,11 @@ extends Node2D
 @onready var time_remaining_value: RichTextLabel = %TimeRemainingValue
 
 var player_data: PlayerStats = ResourceLoader.load("res://Resources/player_stats.tres")
+var world_stats: WorldStats = ResourceLoader.load("res://Resources/world_stats.tres")
+
 @export var wpm := player_data.test_wpm
 @export var xp_value := player_data.test_xp_value
 @export_multiline var test_text := player_data.test_text
-
-signal test_over(success: bool)
 
 var running := false
 var already_typed := ""
@@ -46,7 +46,8 @@ func _process(delta: float) -> void:
 		time_remaining -= delta
 		set_time_display(time_remaining)
 	if time_remaining <= 0:
-		test_over.emit(false)
+		SceneManager.go_back_to_previous_grace()
+		world_stats.reset_enemies()
 
 var characters_to_type = "ABCDEFGHIJKLMNOPQRSTUVWXYZ'.,".split("", true, 0)
 
@@ -79,7 +80,9 @@ func _input(event: InputEvent) -> void:
 		
 		if left_to_type.length() <= 0:
 			running = false
-			test_over.emit(true)
+			world_stats.enemies[world_stats.current_enemy_id] = false
+			player_data.xp += xp_value
+			SceneManager.go_back_to_previous_level()
 	pass
 
 func _on_stamina_regen_timer_timeout() -> void:
