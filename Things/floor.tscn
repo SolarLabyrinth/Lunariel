@@ -4,7 +4,7 @@
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rsf1c"]
 atlas = ExtResource("1_elvnv")
-region = Rect2(0, 36, 29, 44)
+region = Rect2(145, 32, 28, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mtx85"]
 atlas = ExtResource("1_elvnv")
@@ -13,22 +13,42 @@ region = Rect2(0, 96, 160, 16)
 [node name="Node2D" type="Node2D"]
 
 [node name="Tree" type="Sprite2D" parent="."]
-position = Vector2(149, 216)
+position = Vector2(118, 172)
 scale = Vector2(4, 4)
 texture = SubResource("AtlasTexture_rsf1c")
 
 [node name="Tree2" type="Sprite2D" parent="."]
-position = Vector2(269, 216)
+position = Vector2(238, 172)
 scale = Vector2(4, 4)
 texture = SubResource("AtlasTexture_rsf1c")
 
 [node name="Tree3" type="Sprite2D" parent="."]
-position = Vector2(390, 216)
+position = Vector2(359, 172)
 scale = Vector2(4, 4)
 texture = SubResource("AtlasTexture_rsf1c")
 
 [node name="Tree4" type="Sprite2D" parent="."]
-position = Vector2(505, 216)
+position = Vector2(474, 172)
+scale = Vector2(4, 4)
+texture = SubResource("AtlasTexture_rsf1c")
+
+[node name="Tree5" type="Sprite2D" parent="."]
+position = Vector2(178, 172)
+scale = Vector2(4, 4)
+texture = SubResource("AtlasTexture_rsf1c")
+
+[node name="Tree6" type="Sprite2D" parent="."]
+position = Vector2(298, 172)
+scale = Vector2(4, 4)
+texture = SubResource("AtlasTexture_rsf1c")
+
+[node name="Tree7" type="Sprite2D" parent="."]
+position = Vector2(419, 172)
+scale = Vector2(4, 4)
+texture = SubResource("AtlasTexture_rsf1c")
+
+[node name="Tree8" type="Sprite2D" parent="."]
+position = Vector2(534, 172)
 scale = Vector2(4, 4)
 texture = SubResource("AtlasTexture_rsf1c")
 
