@@ -10,8 +10,6 @@ var world_stats: WorldStats = preload("res://Resources/world_stats.tres")
 @onready var levelvalue: RichTextLabel = %Levelvalue
 
 func _ready() -> void:
-	print(player_data)
-	print(world_stats)
 	update_ui()
 	player_data.changed.connect(update_ui)
 	
