@@ -24,22 +24,16 @@ func update_ui():
 	levelvalue.text = str(player_data.level)
 	if player_data.xp >= player_data.wpm_adjustment:
 		%SpeedAddButton.show()
-		%SpeedSubButton.show()
 	else:
 		%SpeedAddButton.hide()
-		%SpeedSubButton.hide()
 	if player_data.xp >= player_data.stamina_amount:
 		%StaminaAddButton.show()
-		%StaminaSubButton.show()
 	else:
 		%StaminaAddButton.hide()
-		%StaminaSubButton.hide()
 	if player_data.xp >= player_data.stamina_regen:
 		%RegenAddButton.show()
-		%RegenSubButton.show()
 	else:
 		%RegenAddButton.hide()
-		%RegenSubButton.hide()
 
 func _on_speed_add_button_pressed() -> void:
 	player_data.wpm_adjustment += 1
