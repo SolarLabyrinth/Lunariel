@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://bvl874wa3nmyj"]
+[gd_scene load_steps=6 format=3 uid="uid://bvl874wa3nmyj"]
 
 [ext_resource type="Texture2D" uid="uid://6x75b45f4vsp" path="res://Assets/main-spritesheet.png" id="1_elvnv"]
 
@@ -10,45 +10,70 @@ region = Rect2(145, 32, 28, 64)
 atlas = ExtResource("1_elvnv")
 region = Rect2(0, 96, 160, 16)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_1ordq"]
+atlas = ExtResource("1_elvnv")
+region = Rect2(64, 1, 15, 15)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lhfxt"]
+atlas = ExtResource("1_elvnv")
+region = Rect2(288, 2, 160, 90)
+
 [node name="Node2D" type="Node2D"]
 
 [node name="Tree" type="Sprite2D" parent="."]
-position = Vector2(118, 172)
+visible = false
+position = Vector2(15, 172)
 scale = Vector2(4, 4)
 texture = SubResource("AtlasTexture_rsf1c")
 
 [node name="Tree2" type="Sprite2D" parent="."]
-position = Vector2(238, 172)
+position = Vector2(135, 172)
 scale = Vector2(4, 4)
 texture = SubResource("AtlasTexture_rsf1c")
 
 [node name="Tree3" type="Sprite2D" parent="."]
-position = Vector2(359, 172)
+position = Vector2(256, 172)
 scale = Vector2(4, 4)
 texture = SubResource("AtlasTexture_rsf1c")
 
 [node name="Tree4" type="Sprite2D" parent="."]
-position = Vector2(474, 172)
+position = Vector2(371, 172)
+scale = Vector2(4, 4)
+texture = SubResource("AtlasTexture_rsf1c")
+
+[node name="Tree9" type="Sprite2D" parent="."]
+position = Vector2(491, 172)
 scale = Vector2(4, 4)
 texture = SubResource("AtlasTexture_rsf1c")
 
 [node name="Tree5" type="Sprite2D" parent="."]
-position = Vector2(178, 172)
+position = Vector2(75, 172)
 scale = Vector2(4, 4)
 texture = SubResource("AtlasTexture_rsf1c")
 
 [node name="Tree6" type="Sprite2D" parent="."]
-position = Vector2(298, 172)
+position = Vector2(195, 172)
 scale = Vector2(4, 4)
 texture = SubResource("AtlasTexture_rsf1c")
 
 [node name="Tree7" type="Sprite2D" parent="."]
-position = Vector2(419, 172)
+position = Vector2(316, 172)
 scale = Vector2(4, 4)
 texture = SubResource("AtlasTexture_rsf1c")
 
 [node name="Tree8" type="Sprite2D" parent="."]
-position = Vector2(534, 172)
+position = Vector2(431, 172)
+scale = Vector2(4, 4)
+texture = SubResource("AtlasTexture_rsf1c")
+
+[node name="Tree10" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(619, 172)
+scale = Vector2(4, 4)
+texture = SubResource("AtlasTexture_rsf1c")
+
+[node name="Tree11" type="Sprite2D" parent="."]
+position = Vector2(559, 172)
 scale = Vector2(4, 4)
 texture = SubResource("AtlasTexture_rsf1c")
 
@@ -56,3 +81,13 @@ texture = SubResource("AtlasTexture_rsf1c")
 position = Vector2(320, 328)
 scale = Vector2(4, 4)
 texture = SubResource("AtlasTexture_mtx85")
+
+[node name="Moon" type="Sprite2D" parent="."]
+position = Vector2(46, 34)
+scale = Vector2(4, 4)
+texture = SubResource("AtlasTexture_1ordq")
+
+[node name="WholeAssScene" type="Sprite2D" parent="."]
+position = Vector2(320, 180)
+scale = Vector2(4, 4)
+texture = SubResource("AtlasTexture_lhfxt")

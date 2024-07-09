@@ -1,8 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://b3ut4j5jl2dct"]
+[gd_scene load_steps=15 format=3 uid="uid://b3ut4j5jl2dct"]
 
 [ext_resource type="Script" path="res://Things/door.gd" id="1_i5vur"]
 [ext_resource type="Texture2D" uid="uid://6x75b45f4vsp" path="res://Assets/main-spritesheet.png" id="1_je343"]
-[ext_resource type="Theme" uid="uid://bahunhngepcwh" path="res://Resources/ui-theme.tres" id="3_3dvsw"]
+[ext_resource type="Texture2D" uid="uid://cccfjewo0jqs0" path="res://Assets/portal.png" id="3_k1gjo"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_nd685"]
 radius = 38.96
@@ -10,11 +10,65 @@ height = 192.76
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4rbhi"]
 atlas = ExtResource("1_je343")
-region = Rect2(0, 0, 16, 32)
+region = Rect2(192, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jvo5v"]
 atlas = ExtResource("1_je343")
-region = Rect2(51, 18, 10, 13)
+region = Rect2(50, 17, 12, 15)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u2m38"]
+atlas = ExtResource("1_je343")
+region = Rect2(52, 2, 9, 11)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d5qyi"]
+atlas = ExtResource("3_k1gjo")
+region = Rect2(0, 0, 10, 23)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4oswm"]
+atlas = ExtResource("3_k1gjo")
+region = Rect2(10, 0, 10, 23)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jhrn7"]
+atlas = ExtResource("3_k1gjo")
+region = Rect2(20, 0, 10, 23)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fgwtk"]
+atlas = ExtResource("3_k1gjo")
+region = Rect2(30, 0, 10, 23)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f7qgt"]
+atlas = ExtResource("3_k1gjo")
+region = Rect2(40, 0, 10, 23)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k3w0p"]
+atlas = ExtResource("3_k1gjo")
+region = Rect2(50, 0, 10, 23)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ankja"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d5qyi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4oswm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jhrn7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fgwtk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f7qgt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k3w0p")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
 
 [node name="Door" type="Node2D"]
 script = ExtResource("1_i5vur")
@@ -35,17 +89,19 @@ position = Vector2(0, -98)
 scale = Vector2(4, 4)
 texture = SubResource("AtlasTexture_jvo5v")
 
-[node name="InteractionLabel" type="RichTextLabel" parent="."]
+[node name="InteractionLabel" type="Sprite2D" parent="."]
 unique_name_in_owner = true
 visible = false
-offset_left = -10.0
-offset_top = -112.0
-offset_right = 37.0
-offset_bottom = -63.0
-theme = ExtResource("3_3dvsw")
-theme_override_font_sizes/normal_font_size = 32
-text = "E"
-fit_content = true
+position = Vector2(0, -86)
+scale = Vector2(4, 4)
+texture = SubResource("AtlasTexture_u2m38")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, 18)
+scale = Vector2(4, 4)
+sprite_frames = SubResource("SpriteFrames_ankja")
+autoplay = "default"
+frame_progress = 0.513388
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
 [connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]

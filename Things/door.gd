@@ -7,11 +7,15 @@ enum Side { Left, Right }
 # @export var target_player_x := 0
 # @export var target_player_face := 0
 @export var lock := 0
+@export var facing := 'left'
 
-@onready var interaction_label: RichTextLabel = %InteractionLabel
+@onready var interaction_label: Sprite2D = %InteractionLabel
 @onready var lock_sprite: Sprite2D = %Lock
 
 var world_stats: WorldStats = ResourceLoader.load("res://Resources/world_stats.tres")
+
+func _ready() -> void:
+	pass
 
 var is_activatable := false:
 	set(value):

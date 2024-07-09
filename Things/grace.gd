@@ -2,7 +2,7 @@ class_name Grace extends Node2D
 
 @export var level_id := 0
 
-@onready var interaction_label: RichTextLabel = %InteractionLabel
+@onready var interaction_label: Sprite2D = %InteractionLabel
 
 var world_stats: WorldStats = ResourceLoader.load("res://Resources/world_stats.tres")
 
