@@ -2,7 +2,7 @@ class_name Key extends Node2D
 
 @export var key_id := 0
 
-var world_stats: WorldStats = ResourceLoader.load("res://Resources/world_stats.tres")
+var world_stats: WorldStats = preload("res://Resources/world_stats.tres")
 
 func _ready() -> void:
 	if world_stats.keys[key_id]:

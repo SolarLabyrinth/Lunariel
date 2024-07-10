@@ -11,7 +11,9 @@
 [node name="Floor" parent="." instance=ExtResource("1_vfjoj")]
 
 [node name="Enemy" parent="." instance=ExtResource("2_wl7bb")]
-position = Vector2(273, 268)
+position = Vector2(274, 252)
+size = 1
+facing = 1
 enemy_id = 5
 
 [node name="Door2" parent="." instance=ExtResource("3_exe67")]

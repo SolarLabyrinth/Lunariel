@@ -20,6 +20,7 @@ position = Vector2(32, 236)
 target_level_id = 5
 target_side = 1
 lock = 1
+facing = 0
 
 [node name="Door2" parent="." instance=ExtResource("3_auagh")]
 position = Vector2(608, 236)

@@ -6,8 +6,8 @@ extends Node2D
 @onready var hourglass: AnimatedSprite2D = %Hourglass
 @onready var staminabar: AnimatedSprite2D = %StaminaBar
 
-var player_data: PlayerStats = ResourceLoader.load("res://Resources/player_stats.tres")
-var world_stats: WorldStats = ResourceLoader.load("res://Resources/world_stats.tres")
+var player_data: PlayerStats = preload("res://Resources/player_stats.tres")
+var world_stats: WorldStats = preload("res://Resources/world_stats.tres")
 
 var wpm := world_stats.current_wpm
 var xp_value := world_stats.current_xp

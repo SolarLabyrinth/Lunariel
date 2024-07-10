@@ -78,7 +78,8 @@ script = ExtResource("1_i5vur")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CapsuleShape2D_nd685")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Door" type="Sprite2D" parent="."]
+unique_name_in_owner = true
 scale = Vector2(4, 4)
 texture = SubResource("AtlasTexture_4rbhi")
 
@@ -101,7 +102,7 @@ position = Vector2(0, 18)
 scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_ankja")
 autoplay = "default"
-frame_progress = 0.612955
+frame_progress = 0.892366
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
 [connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]

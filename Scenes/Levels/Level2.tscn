@@ -15,13 +15,14 @@ script = ExtResource("1_wv4bw")
 position = Vector2(32, 236)
 target_level_id = 1
 target_side = 1
+facing = 0
 
 [node name="Door2" parent="." instance=ExtResource("2_dpmdo")]
 position = Vector2(431, 236)
 target_level_id = 7
 
 [node name="Enemy" parent="." instance=ExtResource("3_pf2h0")]
-position = Vector2(276, 268)
+position = Vector2(276, 252)
 enemy_id = 1
 
 [node name="Door3" parent="." instance=ExtResource("2_dpmdo")]

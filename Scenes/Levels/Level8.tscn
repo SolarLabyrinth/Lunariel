@@ -13,9 +13,11 @@
 position = Vector2(32, 236)
 target_level_id = 7
 target_side = 1
+facing = 0
 
 [node name="Enemy" parent="." instance=ExtResource("3_upc2u")]
-position = Vector2(349, 268)
+position = Vector2(350, 252)
+size = 1
 enemy_id = 7
 
 [node name="Player" parent="." instance=ExtResource("4_gx8dn")]

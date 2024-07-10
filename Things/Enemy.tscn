@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://dr71kej45meo"]
+[gd_scene load_steps=8 format=3 uid="uid://dr71kej45meo"]
 
 [ext_resource type="Texture2D" uid="uid://6x75b45f4vsp" path="res://Assets/main-spritesheet.png" id="1_3aeif"]
 [ext_resource type="Script" path="res://Things/enemy.gd" id="1_apwp6"]
@@ -9,7 +9,44 @@ height = 173.12
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rr2rk"]
 atlas = ExtResource("1_3aeif")
-region = Rect2(96, 16, 16, 16)
+region = Rect2(86, 35, 19, 24)
+
+[sub_resource type="Animation" id="Animation_5i8xr"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -4)]
+}
+
+[sub_resource type="Animation" id="Animation_tuyo2"]
+resource_name = "idle"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, -4), Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7kc1b"]
+_data = {
+"RESET": SubResource("Animation_5i8xr"),
+"idle": SubResource("Animation_tuyo2")
+}
 
 [node name="Enemy" type="Node2D"]
 script = ExtResource("1_apwp6")
@@ -20,7 +57,14 @@ script = ExtResource("1_apwp6")
 shape = SubResource("CapsuleShape2D_cxxf2")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -4)
 scale = Vector2(4, 4)
 texture = SubResource("AtlasTexture_rr2rk")
+
+[node name="HoverAnimation" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_7kc1b")
+}
+autoplay = "idle"
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

@@ -1,6 +1,6 @@
 extends Node2D
 
-var world_stats: WorldStats = ResourceLoader.load("res://Resources/world_stats.tres")
+var world_stats: WorldStats = preload("res://Resources/world_stats.tres")
 
 const TYPING_TEST = preload("res://Scenes/TypingTest2.tscn")
 const STATS_SCREEN = preload("res://Scenes/StatsScreen.tscn")

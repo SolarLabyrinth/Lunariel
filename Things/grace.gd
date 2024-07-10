@@ -4,7 +4,7 @@ class_name Grace extends Node2D
 
 @onready var interaction_label: Sprite2D = %InteractionLabel
 
-var world_stats: WorldStats = ResourceLoader.load("res://Resources/world_stats.tres")
+var world_stats: WorldStats = preload("res://Resources/world_stats.tres")
 
 var is_active := false:
 	set(value):

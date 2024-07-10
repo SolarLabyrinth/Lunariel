@@ -7,15 +7,19 @@ enum Side { Left, Right }
 # @export var target_player_x := 0
 # @export var target_player_face := 0
 @export var lock := 0
-@export var facing := 'left'
+@export var facing := Side.Right
 
 @onready var interaction_label: Sprite2D = %InteractionLabel
 @onready var lock_sprite: Sprite2D = %Lock
+@onready var door: Sprite2D = %Door
 
-var world_stats: WorldStats = ResourceLoader.load("res://Resources/world_stats.tres")
+var world_stats: WorldStats = preload("res://Resources/world_stats.tres")
 
 func _ready() -> void:
-	pass
+	if facing == Side.Left:
+		door.flip_h = true
+	else:
+		door.flip_h = false
 
 var is_activatable := false:
 	set(value):

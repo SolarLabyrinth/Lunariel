@@ -2,7 +2,7 @@ class_name Player extends Node2D
 
 @onready var sprite: Sprite2D = $Sprite2D
 
-var world_stats: WorldStats = ResourceLoader.load("res://Resources/world_stats.tres")
+var world_stats: WorldStats = preload("res://Resources/world_stats.tres")
 var speed = 250
 
 func _ready() -> void:
