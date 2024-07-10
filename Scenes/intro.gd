@@ -4,10 +4,11 @@ var intro_text := [
 	"""You've slumbered for so long spirit.
 We thought you gone.""",
 	"""But here you be.""",
-	"""The stain of <Boss name> runs thick in these woods.""",
+	"""The shadow of Erebus runs thick in these woods.""",
 	"""The strong of it's denizens have long since fled.
 The lesser lie dead.""",
-	"""But with you awake... Hope may yet be restored."""
+	"""But with you awake...
+Lunariel's Light may grace this place once more.""",
 ]
 
 @onready var text: RichTextLabel = %Text

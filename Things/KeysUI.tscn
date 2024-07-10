@@ -1,0 +1,61 @@
+[gd_scene load_steps=8 format=3 uid="uid://cqu0feemqe45k"]
+
+[ext_resource type="Script" path="res://Things/keys_ui.gd" id="1_0pgcm"]
+[ext_resource type="Texture2D" uid="uid://6x75b45f4vsp" path="res://Assets/main-spritesheet.png" id="1_7g7wo"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7aglg"]
+atlas = ExtResource("1_7g7wo")
+region = Rect2(0, 128, 45, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kchh0"]
+atlas = ExtResource("1_7g7wo")
+region = Rect2(37, 129, 7, 7)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v8duy"]
+atlas = ExtResource("1_7g7wo")
+region = Rect2(27, 129, 7, 7)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_h4rn7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kchh0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v8duy")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rc5kk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kchh0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v8duy")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="KeysUi" type="Node2D"]
+scale = Vector2(4, 4)
+script = ExtResource("1_0pgcm")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("AtlasTexture_7aglg")
+
+[node name="Key1" type="AnimatedSprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(8, 0)
+sprite_frames = SubResource("SpriteFrames_h4rn7")
+
+[node name="Key2" type="AnimatedSprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(18, 0)
+sprite_frames = SubResource("SpriteFrames_rc5kk")

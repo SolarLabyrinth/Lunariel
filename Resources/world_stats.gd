@@ -17,6 +17,9 @@ class_name WorldStats extends Resource
     1: false,
     2: false,
 }
+
+signal keys_changed
+
 @export var enemies := generate_enemies()
 
 func generate_enemies() -> Dictionary:

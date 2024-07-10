@@ -1,10 +1,12 @@
-[gd_scene load_steps=6 format=3 uid="uid://blul4mhtmi5kh"]
+[gd_scene load_steps=8 format=3 uid="uid://blul4mhtmi5kh"]
 
 [ext_resource type="PackedScene" uid="uid://bvl874wa3nmyj" path="res://Things/floor.tscn" id="1_vfjoj"]
 [ext_resource type="PackedScene" uid="uid://dr71kej45meo" path="res://Things/Enemy.tscn" id="2_wl7bb"]
 [ext_resource type="PackedScene" uid="uid://b3ut4j5jl2dct" path="res://Things/Door.tscn" id="3_exe67"]
 [ext_resource type="PackedScene" uid="uid://dkj31suye1iqr" path="res://Things/Key.tscn" id="4_py58y"]
 [ext_resource type="PackedScene" uid="uid://bytubugb5uuw3" path="res://Things/Player.tscn" id="4_wah20"]
+[ext_resource type="Theme" uid="uid://bahunhngepcwh" path="res://Resources/ui-theme.tres" id="6_rroaw"]
+[ext_resource type="PackedScene" uid="uid://cqu0feemqe45k" path="res://Things/KeysUI.tscn" id="7_r3t0q"]
 
 [node name="Level6" type="Node2D"]
 
@@ -26,3 +28,17 @@ key_id = 2
 
 [node name="Player" parent="." instance=ExtResource("4_wah20")]
 position = Vector2(523, 252)
+
+[node name="Title" type="RichTextLabel" parent="."]
+offset_left = 4.0
+offset_top = 336.0
+offset_right = 644.0
+offset_bottom = 360.0
+theme = ExtResource("6_rroaw")
+text = "The Gloomveil"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+
+[node name="KeysUi" parent="." instance=ExtResource("7_r3t0q")]
+position = Vector2(550, 342)
