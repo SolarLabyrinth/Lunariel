@@ -21,6 +21,14 @@ facing = 0
 position = Vector2(350, 252)
 size = 1
 enemy_id = 7
+text = "By ancient light and purest flame,
+From shadow's grasp, I reclaim.
+Spirits of earth, air, water, and fire,
+Cleanse this place, lift the dire.
+From roots to leaves, night shall flee,
+Restore this forest, blessed be.
+Darkness gone, light’s embrace,
+Peace and life, now take their place."
 
 [node name="Player" parent="." instance=ExtResource("4_gx8dn")]
 position = Vector2(122, 252)

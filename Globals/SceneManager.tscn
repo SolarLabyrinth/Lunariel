@@ -1,6 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://c200a0ugyvmj5"]
+[gd_scene load_steps=3 format=3 uid="uid://c200a0ugyvmj5"]
 
 [ext_resource type="Script" path="res://Globals/scene_manager.gd" id="1_u7drk"]
+[ext_resource type="AudioStream" uid="uid://cg5owknyn1q8" path="res://Assets/For Me.mp3" id="2_1ljkl"]
 
 [node name="SceneManager" type="Node2D"]
 script = ExtResource("1_u7drk")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_1ljkl")
+volume_db = -25.0
+autoplay = true
+parameters/looping = true

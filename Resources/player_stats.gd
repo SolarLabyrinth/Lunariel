@@ -4,7 +4,7 @@ class_name PlayerStats extends Resource
 	get():
 		return 1 + (stamina_regen - 1) + (stamina_amount - 1) + (wpm_adjustment - 1)
 
-@export var xp := 0:
+@export var xp := 2:
 	set(value):
 		var newValue = clamp(value, 0, 999)
 		if newValue != xp:
@@ -40,15 +40,3 @@ class_name PlayerStats extends Resource
 		if newValue != wpm_adjustment:
 			wpm_adjustment = value
 			changed.emit()
-
-@export var test_wpm := 70
-@export var test_xp_value := 1
-# @export_multiline var test_text := """test"""
-@export_multiline var test_text := """By ancient light and purest flame,
-From shadow's grasp, I reclaim.
-Spirits of earth, air, water, and fire,
-Cleanse this place, lift the dire.
-From roots to leaves, night shall flee,
-Restore this forest, blessed be.
-Darkness gone, light’s embrace,
-Peace and life, now take their place."""

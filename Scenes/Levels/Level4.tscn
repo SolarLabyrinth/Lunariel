@@ -20,7 +20,12 @@ facing = 0
 
 [node name="Enemy" parent="." instance=ExtResource("3_4b0tf")]
 position = Vector2(350, 252)
+size = 1
 enemy_id = 3
+text = "By ancient light and purest flame,
+From shadow's grasp, I reclaim.
+Spirits of earth, air, water, and fire,
+Cleanse this place, lift the dire."
 
 [node name="Key" parent="." instance=ExtResource("5_rrmxv")]
 position = Vector2(584, 268)

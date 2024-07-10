@@ -22,6 +22,8 @@ facing = 0
 position = Vector2(378, 252)
 facing = 1
 enemy_id = 4
+text = "From roots to leaves, night shall flee,
+Restore this forest, blessed be."
 
 [node name="Grace" parent="." instance=ExtResource("4_nvnbx")]
 position = Vector2(204, 270)

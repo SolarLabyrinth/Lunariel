@@ -21,6 +21,8 @@ facing = 0
 [node name="Enemy" parent="." instance=ExtResource("3_satr7")]
 position = Vector2(276, 252)
 enemy_id = 2
+text = "Spirits of earth, air, water, and fire,
+Cleanse this place, lift the dire."
 
 [node name="Grace" parent="." instance=ExtResource("4_rp4xi")]
 position = Vector2(447, 270)

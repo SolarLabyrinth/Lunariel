@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://c31pd0pwwwyci"]
+[gd_scene load_steps=15 format=3 uid="uid://c31pd0pwwwyci"]
 
 [ext_resource type="Texture2D" uid="uid://6x75b45f4vsp" path="res://Assets/main-spritesheet.png" id="1_hphua"]
 [ext_resource type="Script" path="res://Things/grace.gd" id="1_j3yya"]
+[ext_resource type="Texture2D" uid="uid://gne2yc5pkje7" path="res://Assets/grace.png" id="3_lcu30"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_iqggd"]
 radius = 38.71
@@ -53,6 +54,42 @@ _data = {
 "flip": SubResource("Animation_2iwmi")
 }
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_muthh"]
+atlas = ExtResource("3_lcu30")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pohtk"]
+atlas = ExtResource("3_lcu30")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2mvon"]
+atlas = ExtResource("3_lcu30")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t8e64"]
+atlas = ExtResource("3_lcu30")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yudk0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_muthh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pohtk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2mvon")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t8e64")
+}],
+"loop": true,
+"name": &"default",
+"speed": 7.0
+}]
+
 [node name="Grace" type="Node2D"]
 script = ExtResource("1_j3yya")
 
@@ -62,13 +99,14 @@ script = ExtResource("1_j3yya")
 shape = SubResource("CapsuleShape2D_iqggd")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
 scale = Vector2(4, 4)
 texture = SubResource("AtlasTexture_e0ham")
 
 [node name="InteractionLabel" type="Sprite2D" parent="."]
 unique_name_in_owner = true
 visible = false
-position = Vector2(0, -64)
+position = Vector2(0, -92)
 scale = Vector2(4, 4)
 texture = SubResource("AtlasTexture_fov2s")
 
@@ -77,6 +115,13 @@ libraries = {
 "": SubResource("AnimationLibrary_8xia2")
 }
 autoplay = "flip"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -34)
+scale = Vector2(4, 4)
+sprite_frames = SubResource("SpriteFrames_yudk0")
+autoplay = "default"
+frame_progress = 0.0912734
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
 [connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]
