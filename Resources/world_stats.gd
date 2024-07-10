@@ -9,6 +9,9 @@ class_name WorldStats extends Resource
 @export var last_grace_face := player_face
 
 @export var current_enemy_id := 0
+@export var current_wpm := 70
+@export var current_xp := 1
+@export var current_text := "test"
 
 @export var keys := {
     1: false,

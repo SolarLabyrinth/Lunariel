@@ -3,18 +3,21 @@ extends Node2D
 @onready var rich_text_label: RichTextLabel = %TestText
 @onready var STAMINA_VALUE_LABEL: RichTextLabel = %StaminaValueLabel
 @onready var time_remaining_value: RichTextLabel = %TimeRemainingValue
+@onready var hourglass: AnimatedSprite2D = %Hourglass
+@onready var staminabar: AnimatedSprite2D = %StaminaBar
 
 var player_data: PlayerStats = ResourceLoader.load("res://Resources/player_stats.tres")
 var world_stats: WorldStats = ResourceLoader.load("res://Resources/world_stats.tres")
 
-@export var wpm := player_data.test_wpm
-@export var xp_value := player_data.test_xp_value
-@export_multiline var test_text := player_data.test_text
+var wpm := world_stats.current_wpm
+var xp_value := world_stats.current_xp
+var test_text := world_stats.current_text
 
 var running := false
 var already_typed := ""
 var left_to_type := test_text
 var time_remaining = 10000000.0
+var total_time = time_remaining
 
 @onready var stamina := player_data.stamina_amount + 3:
 	get():
@@ -27,23 +30,33 @@ var time_remaining = 10000000.0
 		else:
 			stamina = value
 		STAMINA_VALUE_LABEL.text = str(stamina)
+		staminabar.frame = stamina
 		return stamina
 		
 func calc_test_time():
 	return 60.0 * (test_text.length() / 5.0 / wpm) + 1
 func set_time_display(value: float):
 	time_remaining_value.text = str(floor(value))
+func set_hourglass_frame():
+	var num_frames: int = hourglass.sprite_frames.get_frame_count('default')
+	var progress: float = 1.0 - time_remaining / total_time
+	var active_frame = floor(progress * num_frames)
+	hourglass.frame = active_frame
 
 func _ready() -> void:
 	time_remaining = calc_test_time()
+	total_time = time_remaining
+	set_hourglass_frame()
 	set_time_display(time_remaining)
 	rich_text_label.text = test_text
 	left_to_type = test_text
+	staminabar.frame = stamina
 	pass
 
 func _process(delta: float) -> void:
 	if running:
 		time_remaining -= delta
+		set_hourglass_frame()
 		set_time_display(time_remaining)
 	if time_remaining <= 0:
 		SceneManager.go_back_to_previous_grace()

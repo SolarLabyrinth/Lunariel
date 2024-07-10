@@ -21,7 +21,6 @@ position = Vector2(431, 236)
 target_level_id = 7
 
 [node name="Enemy" parent="." instance=ExtResource("3_pf2h0")]
-visible = false
 position = Vector2(276, 268)
 enemy_id = 1
 
