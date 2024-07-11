@@ -27,8 +27,8 @@ target_level_id = 7
 position = Vector2(276, 252)
 enemy_id = 1
 wpm = 50
-text = "By ancient light and purest flame,
-From shadow's grasp, I reclaim."
+text = "By stars above and earth below,
+Banish the dark, let light show."
 
 [node name="Door3" parent="." instance=ExtResource("2_dpmdo")]
 position = Vector2(608, 236)

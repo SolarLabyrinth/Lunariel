@@ -11,7 +11,8 @@ var world_stats: WorldStats = preload("res://Resources/world_stats.tres")
 
 var wpm := world_stats.current_wpm
 var xp_value := world_stats.current_xp
-var test_text := "test" #world_stats.current_text
+# var test_text := "test"
+var test_text := world_stats.current_text
 
 var running := false
 var already_typed := ""

@@ -22,14 +22,14 @@ position = Vector2(350, 252)
 size = 2
 enemy_id = 7
 wpm = 100
-text = "By ancient light and purest flame,
-From shadow's grasp, I reclaim.
-Spirits of earth, air, water, and fire,
-Cleanse this place, lift the dire.
-From roots to leaves, night shall flee,
-Restore this forest, blessed be.
-Darkness gone, light’s embrace,
-Peace and life, now take their place."
+text = "Sun and moon, grant your light,
+Banish far this endless night.
+Under starlight, pure and bright,
+Heal this place, end the blight.
+Darkness gone, life’s rebirth,
+Forest whole, bless this earth.
+And so the grove here is healed,
+All corruption now is sealed."
 
 [node name="Player" parent="." instance=ExtResource("4_gx8dn")]
 position = Vector2(122, 252)

@@ -18,10 +18,10 @@ size = 1
 facing = 1
 enemy_id = 5
 wpm = 80
-text = "From roots to leaves, night shall flee,
-Restore this forest, blessed be.
-Darkness gone, light’s embrace,
-Peace and life, now take their place."
+text = "By stars above and earth below,
+Banish the dark, let light show.
+Darkness gone, life’s rebirth,
+Forest whole, bless this earth."
 
 [node name="Door2" parent="." instance=ExtResource("3_exe67")]
 position = Vector2(608, 236)

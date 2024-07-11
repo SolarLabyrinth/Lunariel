@@ -17,6 +17,7 @@ parameters/looping = true
 [node name="KeyPickup" type="AudioStreamPlayer" parent="."]
 unique_name_in_owner = true
 stream = ExtResource("3_fx2sx")
+volume_db = -10.0
 pitch_scale = 0.5
 
 [node name="Click" type="AudioStreamPlayer" parent="."]

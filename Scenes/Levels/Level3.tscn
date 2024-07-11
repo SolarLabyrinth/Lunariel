@@ -22,8 +22,8 @@ facing = 0
 position = Vector2(276, 252)
 enemy_id = 2
 wpm = 55
-text = "Spirits of earth, air, water, and fire,
-Cleanse this place, lift the dire."
+text = "Sun and moon, grant your light,
+Banish far this endless night."
 
 [node name="Grace" parent="." instance=ExtResource("4_rp4xi")]
 position = Vector2(447, 270)
