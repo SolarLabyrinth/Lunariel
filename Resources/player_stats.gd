@@ -4,7 +4,7 @@ class_name PlayerStats extends Resource
 	get():
 		return 1 + (stamina_regen - 1) + (stamina_amount - 1) + (wpm_adjustment - 1)
 
-@export var xp := 2:
+@export var xp := 0:
 	set(value):
 		var newValue = clamp(value, 0, 999)
 		if newValue != xp:

@@ -5,7 +5,7 @@
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7aglg"]
 atlas = ExtResource("1_7g7wo")
-region = Rect2(0, 128, 45, 9)
+region = Rect2(0, 123, 45, 14)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kchh0"]
 atlas = ExtResource("1_7g7wo")
@@ -48,6 +48,7 @@ scale = Vector2(4, 4)
 script = ExtResource("1_0pgcm")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -2.5)
 texture = SubResource("AtlasTexture_7aglg")
 
 [node name="Key1" type="AnimatedSprite2D" parent="."]

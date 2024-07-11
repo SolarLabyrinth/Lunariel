@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://bvl874wa3nmyj"]
+[gd_scene load_steps=7 format=3 uid="uid://bvl874wa3nmyj"]
 
 [ext_resource type="Texture2D" uid="uid://6x75b45f4vsp" path="res://Assets/main-spritesheet.png" id="1_elvnv"]
+[ext_resource type="PackedScene" uid="uid://cqu0feemqe45k" path="res://Things/KeysUI.tscn" id="2_5avhg"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rsf1c"]
 atlas = ExtResource("1_elvnv")
@@ -91,3 +92,7 @@ texture = SubResource("AtlasTexture_1ordq")
 position = Vector2(320, 180)
 scale = Vector2(4, 4)
 texture = SubResource("AtlasTexture_lhfxt")
+
+[node name="KeysUi" parent="." instance=ExtResource("2_5avhg")]
+position = Vector2(593, 349)
+scale = Vector2(2, 2)

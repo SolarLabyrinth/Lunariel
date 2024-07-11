@@ -13,7 +13,6 @@ func _exit_tree() -> void:
     world_stats.keys_changed.disconnect(set_keys)
 
 func set_keys() -> void:
-    print(world_stats.keys)
     if world_stats.keys[1]:
         key1.frame = 1
     else:

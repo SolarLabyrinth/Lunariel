@@ -58,3 +58,7 @@ func _on_add_xp_button_pressed() -> void:
 
 func _on_add_xp_button_2_pressed() -> void:
 	SceneManager.go_back_to_previous_grace()
+
+func _input(_event: InputEvent) -> void:
+	if Input.is_action_just_pressed('sl_cheat_xp'):
+		player_data.xp += 1

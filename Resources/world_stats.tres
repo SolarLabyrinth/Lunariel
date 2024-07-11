@@ -4,5 +4,18 @@
 
 [resource]
 script = ExtResource("1_f8e6y")
-current_level = 0
-player_x = 0
+current_level = 1
+player_x = 110.0
+player_face = "right"
+last_grace_level = null
+last_grace_x = null
+last_grace_face = null
+current_enemy_id = 0
+current_wpm = 70
+current_xp = 1
+current_text = "test"
+keys = {
+1: false,
+2: false
+}
+enemies = null

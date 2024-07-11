@@ -5,17 +5,7 @@
 [resource]
 script = ExtResource("1_lqrrj")
 level = 1
-xp = 0
+xp = 2
 stamina_regen = 1
 stamina_amount = 1
 wpm_adjustment = 1
-test_wpm = 70
-test_xp_value = 1
-test_text = "By ancient light and purest flame,
-From shadow's grasp, I reclaim.
-Spirits of earth, air, water, and fire,
-Cleanse this place, lift the dire.
-From roots to leaves, night shall flee,
-Restore this forest, blessed be.
-Darkness gone, light’s embrace,
-Peace and life, now take their place."

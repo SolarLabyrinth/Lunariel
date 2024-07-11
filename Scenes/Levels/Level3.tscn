@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://d3viiet6ymq0c"]
+[gd_scene load_steps=7 format=3 uid="uid://d3viiet6ymq0c"]
 
 [ext_resource type="PackedScene" uid="uid://bvl874wa3nmyj" path="res://Things/floor.tscn" id="1_ws5u3"]
 [ext_resource type="PackedScene" uid="uid://b3ut4j5jl2dct" path="res://Things/Door.tscn" id="2_vlcq0"]
@@ -6,7 +6,6 @@
 [ext_resource type="PackedScene" uid="uid://c31pd0pwwwyci" path="res://Things/Grace.tscn" id="4_rp4xi"]
 [ext_resource type="PackedScene" uid="uid://bytubugb5uuw3" path="res://Things/Player.tscn" id="5_2fvii"]
 [ext_resource type="Theme" uid="uid://bahunhngepcwh" path="res://Resources/ui-theme.tres" id="6_l6tvp"]
-[ext_resource type="PackedScene" uid="uid://cqu0feemqe45k" path="res://Things/KeysUI.tscn" id="7_praku"]
 
 [node name="Level3" type="Node2D"]
 
@@ -45,6 +44,3 @@ text = "Twilight Thicket"
 fit_content = true
 scroll_active = false
 autowrap_mode = 0
-
-[node name="KeysUi" parent="." instance=ExtResource("7_praku")]
-position = Vector2(550, 342)

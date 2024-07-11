@@ -85,7 +85,6 @@ texture = SubResource("AtlasTexture_4rbhi")
 
 [node name="Lock" type="Sprite2D" parent="."]
 unique_name_in_owner = true
-visible = false
 position = Vector2(0, -98)
 scale = Vector2(4, 4)
 texture = SubResource("AtlasTexture_jvo5v")

@@ -34,7 +34,9 @@ var total_time = time_remaining
 		return stamina
 		
 func calc_test_time():
-	return 60.0 * (test_text.length() / 5.0 / wpm) + 1
+	var final_wpm: float = wpm - (5 * player_data.wpm_adjustment)
+	print(final_wpm)
+	return 60.0 * (test_text.length() / 5.0 / final_wpm) + 1
 func set_time_display(value: float):
 	time_remaining_value.text = str(floor(value))
 func set_hourglass_frame():

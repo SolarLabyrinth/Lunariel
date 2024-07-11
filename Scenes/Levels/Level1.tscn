@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bmrowkvyf6mho"]
+[gd_scene load_steps=7 format=3 uid="uid://bmrowkvyf6mho"]
 
 [ext_resource type="Script" path="res://Scenes/Levels/level.gd" id="1_0dagy"]
 [ext_resource type="PackedScene" uid="uid://c31pd0pwwwyci" path="res://Things/Grace.tscn" id="1_hr5tb"]
@@ -6,7 +6,6 @@
 [ext_resource type="PackedScene" uid="uid://bytubugb5uuw3" path="res://Things/Player.tscn" id="2_kilnd"]
 [ext_resource type="PackedScene" uid="uid://b3ut4j5jl2dct" path="res://Things/Door.tscn" id="3_auagh"]
 [ext_resource type="Theme" uid="uid://bahunhngepcwh" path="res://Resources/ui-theme.tres" id="6_1ider"]
-[ext_resource type="PackedScene" uid="uid://cqu0feemqe45k" path="res://Things/KeysUI.tscn" id="7_m77si"]
 
 [node name="Level1" type="Node2D"]
 script = ExtResource("1_0dagy")
@@ -41,6 +40,3 @@ text = "Moonlit Grove"
 fit_content = true
 scroll_active = false
 autowrap_mode = 0
-
-[node name="KeysUi" parent="." instance=ExtResource("7_m77si")]
-position = Vector2(550, 342)
