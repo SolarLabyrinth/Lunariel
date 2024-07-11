@@ -5,6 +5,7 @@ extends Node2D
 @onready var time_remaining_value: RichTextLabel = %TimeRemainingValue
 @onready var hourglass: AnimatedSprite2D = %Hourglass
 @onready var staminabar: AnimatedSprite2D = %StaminaBar
+@onready var timer: Timer = %StaminaRegenTimer
 
 var player_data: PlayerStats = preload("res://Resources/player_stats.tres")
 var world_stats: WorldStats = preload("res://Resources/world_stats.tres")
@@ -54,6 +55,7 @@ func _ready() -> void:
 	rich_text_label.text = test_text
 	left_to_type = test_text
 	staminabar.frame = stamina
+	timer.wait_time = 5.0 - (player_data.stamina_regen * .33)
 	pass
 
 func _process(delta: float) -> void:
@@ -67,8 +69,8 @@ func _process(delta: float) -> void:
 		world_stats.last_xp_value = player_data.xp
 
 		player_data.xp = 0
-		SceneManager.go_back_to_previous_grace()
 		world_stats.reset_enemies()
+		SceneManager.show_death()
 
 var characters_to_type = "ABCDEFGHIJKLMNOPQRSTUVWXYZ'.,".split("", true, 0)
 
@@ -103,7 +105,10 @@ func _input(event: InputEvent) -> void:
 			running = false
 			world_stats.enemies[world_stats.current_enemy_id] = false
 			player_data.xp += xp_value
-			SceneManager.go_back_to_previous_level()
+			if world_stats.current_enemy_id == 7:
+				SceneManager.show_win()
+			else:
+				SceneManager.go_back_to_previous_level()
 	pass
 
 func _on_stamina_regen_timer_timeout() -> void:

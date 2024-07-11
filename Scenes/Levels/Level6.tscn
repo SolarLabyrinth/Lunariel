@@ -18,6 +18,7 @@ size = 1
 facing = 1
 enemy_id = 5
 wpm = 80
+xp = 3
 text = "By stars above and earth below,
 Banish the dark, let light show.
 Darkness gone, life’s rebirth,

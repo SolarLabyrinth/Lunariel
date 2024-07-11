@@ -22,6 +22,7 @@ facing = 0
 position = Vector2(350, 252)
 size = 1
 enemy_id = 3
+xp = 3
 text = "Under starlight, pure and bright,
 Heal this place, end the blight.
 Spirits ancient, heed my plea,

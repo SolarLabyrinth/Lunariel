@@ -22,6 +22,7 @@ position = Vector2(350, 252)
 size = 2
 enemy_id = 7
 wpm = 100
+xp = 5
 text = "Sun and moon, grant your light,
 Banish far this endless night.
 Under starlight, pure and bright,

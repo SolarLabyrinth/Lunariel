@@ -4,8 +4,8 @@
 [ext_resource type="Script" path="res://Things/enemy.gd" id="1_apwp6"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cxxf2"]
-radius = 48.28
-height = 173.12
+radius = 67.42
+height = 249.68
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rr2rk"]
 atlas = ExtResource("1_3aeif")

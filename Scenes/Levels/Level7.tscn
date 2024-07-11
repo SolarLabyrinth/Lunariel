@@ -21,6 +21,7 @@ facing = 0
 [node name="Enemy" parent="." instance=ExtResource("3_b7q7x")]
 position = Vector2(278, 252)
 enemy_id = 6
+xp = 2
 text = "Spirits ancient, heed my plea,
 Cleanse this forest, set it free."
 

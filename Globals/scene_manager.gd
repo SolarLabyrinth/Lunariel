@@ -6,6 +6,9 @@ const TYPING_TEST = preload("res://Scenes/TypingTest2.tscn")
 const STATS_SCREEN = preload("res://Scenes/StatsScreen.tscn")
 const INTRO = preload("res://Scenes/Intro.tscn")
 
+const WIN = preload("res://Scenes/Win.tscn")
+const DEATH = preload("res://Scenes/Death.tscn")
+
 const levels = [
 	preload("res://Scenes/Levels/Level1.tscn"),
 	preload("res://Scenes/Levels/Level2.tscn"),
@@ -23,6 +26,11 @@ func show_stats_screen() -> void:
 	get_tree().change_scene_to_packed(STATS_SCREEN)
 func play_intro() -> void:
 	get_tree().change_scene_to_packed(INTRO)
+
+func show_win() -> void:
+	get_tree().change_scene_to_packed(WIN)
+func show_death() -> void:
+	get_tree().change_scene_to_packed(DEATH)
 
 func show_level(level: int) -> void:
 	if(level >= 1 and level <= levels.size()):

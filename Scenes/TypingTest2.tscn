@@ -233,6 +233,7 @@ scroll_active = false
 autowrap_mode = 0
 
 [node name="StaminaRegenTimer" type="Timer" parent="."]
+unique_name_in_owner = true
 wait_time = 5.0
 autostart = true
 
