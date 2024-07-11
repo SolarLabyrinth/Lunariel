@@ -12,6 +12,7 @@ script = ExtResource("1_u7drk")
 stream = ExtResource("2_1ljkl")
 volume_db = -25.0
 autoplay = true
+playback_type = 1
 parameters/looping = true
 
 [node name="KeyPickup" type="AudioStreamPlayer" parent="."]
@@ -19,7 +20,9 @@ unique_name_in_owner = true
 stream = ExtResource("3_fx2sx")
 volume_db = -10.0
 pitch_scale = 0.5
+playback_type = 1
 
 [node name="Click" type="AudioStreamPlayer" parent="."]
 unique_name_in_owner = true
 stream = ExtResource("3_0tghn")
+playback_type = 1
