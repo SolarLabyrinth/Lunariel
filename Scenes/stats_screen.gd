@@ -57,6 +57,7 @@ func _on_add_xp_button_pressed() -> void:
 	player_data.xp += 1
 
 func _on_add_xp_button_2_pressed() -> void:
+	world_stats.reset_enemies()
 	SceneManager.go_back_to_previous_grace()
 
 func _input(_event: InputEvent) -> void:

@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://bmrowkvyf6mho"]
+[gd_scene load_steps=8 format=3 uid="uid://bmrowkvyf6mho"]
 
 [ext_resource type="Script" path="res://Scenes/Levels/level.gd" id="1_0dagy"]
 [ext_resource type="PackedScene" uid="uid://c31pd0pwwwyci" path="res://Things/Grace.tscn" id="1_hr5tb"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bytubugb5uuw3" path="res://Things/Player.tscn" id="2_kilnd"]
 [ext_resource type="PackedScene" uid="uid://b3ut4j5jl2dct" path="res://Things/Door.tscn" id="3_auagh"]
 [ext_resource type="Theme" uid="uid://bahunhngepcwh" path="res://Resources/ui-theme.tres" id="6_1ider"]
+[ext_resource type="PackedScene" uid="uid://c3kos710wxxea" path="res://Things/XP.tscn" id="7_tvcwm"]
 
 [node name="Level1" type="Node2D"]
 script = ExtResource("1_0dagy")
@@ -13,7 +14,7 @@ script = ExtResource("1_0dagy")
 [node name="Floor" parent="." instance=ExtResource("2_dp1a0")]
 
 [node name="Grace" parent="." instance=ExtResource("1_hr5tb")]
-position = Vector2(376, 270)
+position = Vector2(372, 270)
 level_id = 1
 
 [node name="Door" parent="." instance=ExtResource("3_auagh")]
@@ -40,3 +41,7 @@ text = "Moonlit Grove"
 fit_content = true
 scroll_active = false
 autowrap_mode = 0
+
+[node name="Xp" parent="." instance=ExtResource("7_tvcwm")]
+position = Vector2(-100, 274)
+level_id = 1

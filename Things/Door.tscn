@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://b3ut4j5jl2dct"]
+[gd_scene load_steps=18 format=3 uid="uid://b3ut4j5jl2dct"]
 
 [ext_resource type="Script" path="res://Things/door.gd" id="1_i5vur"]
 [ext_resource type="Texture2D" uid="uid://6x75b45f4vsp" path="res://Assets/main-spritesheet.png" id="1_je343"]
@@ -12,9 +12,34 @@ height = 192.76
 atlas = ExtResource("1_je343")
 region = Rect2(192, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_jvo5v"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_bnkrx"]
 atlas = ExtResource("1_je343")
-region = Rect2(50, 17, 12, 15)
+region = Rect2(48, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_60lls"]
+atlas = ExtResource("1_je343")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uirwj"]
+atlas = ExtResource("1_je343")
+region = Rect2(16, 16, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tdbol"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bnkrx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_60lls")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uirwj")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_u2m38"]
 atlas = ExtResource("1_je343")
@@ -83,11 +108,13 @@ unique_name_in_owner = true
 scale = Vector2(4, 4)
 texture = SubResource("AtlasTexture_4rbhi")
 
-[node name="Lock" type="Sprite2D" parent="."]
+[node name="Lock" type="AnimatedSprite2D" parent="."]
 unique_name_in_owner = true
-position = Vector2(0, -98)
+visible = false
+position = Vector2(2, -98)
 scale = Vector2(4, 4)
-texture = SubResource("AtlasTexture_jvo5v")
+sprite_frames = SubResource("SpriteFrames_tdbol")
+frame = 1
 
 [node name="InteractionLabel" type="Sprite2D" parent="."]
 unique_name_in_owner = true

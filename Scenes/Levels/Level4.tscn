@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://cbc3q2dhw3060"]
+[gd_scene load_steps=8 format=3 uid="uid://cbc3q2dhw3060"]
 
 [ext_resource type="PackedScene" uid="uid://bvl874wa3nmyj" path="res://Things/floor.tscn" id="1_q8ikv"]
 [ext_resource type="PackedScene" uid="uid://b3ut4j5jl2dct" path="res://Things/Door.tscn" id="2_iclgb"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bytubugb5uuw3" path="res://Things/Player.tscn" id="4_280mj"]
 [ext_resource type="PackedScene" uid="uid://dkj31suye1iqr" path="res://Things/Key.tscn" id="5_rrmxv"]
 [ext_resource type="Theme" uid="uid://bahunhngepcwh" path="res://Resources/ui-theme.tres" id="6_f02n7"]
+[ext_resource type="PackedScene" uid="uid://c3kos710wxxea" path="res://Things/XP.tscn" id="7_ovmv3"]
 
 [node name="Level4" type="Node2D"]
 
@@ -43,3 +44,7 @@ text = "Shadowmire's Hollow"
 fit_content = true
 scroll_active = false
 autowrap_mode = 0
+
+[node name="Xp" parent="." instance=ExtResource("7_ovmv3")]
+position = Vector2(-100, 274)
+level_id = 4

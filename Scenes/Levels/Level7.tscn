@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://ek8v7sefc2lb"]
+[gd_scene load_steps=8 format=3 uid="uid://ek8v7sefc2lb"]
 
 [ext_resource type="PackedScene" uid="uid://bvl874wa3nmyj" path="res://Things/floor.tscn" id="1_xqdbe"]
 [ext_resource type="PackedScene" uid="uid://b3ut4j5jl2dct" path="res://Things/Door.tscn" id="2_p35qo"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://c31pd0pwwwyci" path="res://Things/Grace.tscn" id="4_0q1b7"]
 [ext_resource type="PackedScene" uid="uid://bytubugb5uuw3" path="res://Things/Player.tscn" id="5_546ek"]
 [ext_resource type="Theme" uid="uid://bahunhngepcwh" path="res://Resources/ui-theme.tres" id="6_3o7tk"]
+[ext_resource type="PackedScene" uid="uid://c3kos710wxxea" path="res://Things/XP.tscn" id="7_qmo64"]
 
 [node name="Level7" type="Node2D"]
 
@@ -45,3 +46,7 @@ text = "Shadowfen Glade"
 fit_content = true
 scroll_active = false
 autowrap_mode = 0
+
+[node name="Xp" parent="." instance=ExtResource("7_qmo64")]
+position = Vector2(-100, 274)
+level_id = 7

@@ -1,13 +1,24 @@
-[gd_scene load_steps=3 format=3 uid="uid://c200a0ugyvmj5"]
+[gd_scene load_steps=5 format=3 uid="uid://c200a0ugyvmj5"]
 
 [ext_resource type="Script" path="res://Globals/scene_manager.gd" id="1_u7drk"]
 [ext_resource type="AudioStream" uid="uid://cg5owknyn1q8" path="res://Assets/For Me.mp3" id="2_1ljkl"]
+[ext_resource type="AudioStream" uid="uid://bwg4eiu248c60" path="res://Assets/click_001.ogg" id="3_0tghn"]
+[ext_resource type="AudioStream" uid="uid://c85ko3sby40j2" path="res://Assets/coin5.ogg" id="3_fx2sx"]
 
 [node name="SceneManager" type="Node2D"]
 script = ExtResource("1_u7drk")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_1ljkl")
 volume_db = -25.0
 autoplay = true
 parameters/looping = true
+
+[node name="KeyPickup" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("3_fx2sx")
+pitch_scale = 0.5
+
+[node name="Click" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("3_0tghn")

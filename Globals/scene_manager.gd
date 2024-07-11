@@ -37,3 +37,17 @@ func go_back_to_previous_grace() -> void:
 	world_stats.player_x = world_stats.last_grace_x
 	world_stats.player_face = world_stats.last_grace_face
 	get_tree().change_scene_to_packed(levels[world_stats.current_level-1])
+
+@onready var key_player: AudioStreamPlayer = %KeyPickup
+@onready var click_player: AudioStreamPlayer = %Click
+
+func play_pickup_key():
+	if !key_player.playing:
+		key_player.play()
+	return key_player.finished
+
+func play_click():
+	# if !click_player.playing:
+	# 	click_player.play()
+	# return click_player.finished
+	pass

@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://d3viiet6ymq0c"]
+[gd_scene load_steps=8 format=3 uid="uid://d3viiet6ymq0c"]
 
 [ext_resource type="PackedScene" uid="uid://bvl874wa3nmyj" path="res://Things/floor.tscn" id="1_ws5u3"]
 [ext_resource type="PackedScene" uid="uid://b3ut4j5jl2dct" path="res://Things/Door.tscn" id="2_vlcq0"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://c31pd0pwwwyci" path="res://Things/Grace.tscn" id="4_rp4xi"]
 [ext_resource type="PackedScene" uid="uid://bytubugb5uuw3" path="res://Things/Player.tscn" id="5_2fvii"]
 [ext_resource type="Theme" uid="uid://bahunhngepcwh" path="res://Resources/ui-theme.tres" id="6_l6tvp"]
+[ext_resource type="PackedScene" uid="uid://c3kos710wxxea" path="res://Things/XP.tscn" id="7_cyyp0"]
 
 [node name="Level3" type="Node2D"]
 
@@ -20,6 +21,7 @@ facing = 0
 [node name="Enemy" parent="." instance=ExtResource("3_satr7")]
 position = Vector2(276, 252)
 enemy_id = 2
+wpm = 55
 text = "Spirits of earth, air, water, and fire,
 Cleanse this place, lift the dire."
 
@@ -44,3 +46,7 @@ text = "Twilight Thicket"
 fit_content = true
 scroll_active = false
 autowrap_mode = 0
+
+[node name="Xp" parent="." instance=ExtResource("7_cyyp0")]
+position = Vector2(-100, 274)
+level_id = 3

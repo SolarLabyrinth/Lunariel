@@ -10,7 +10,7 @@ enum Side { Left, Right }
 @export var facing := Side.Right
 
 @onready var interaction_label: Sprite2D = %InteractionLabel
-@onready var lock_sprite: Sprite2D = %Lock
+@onready var lock_sprite: AnimatedSprite2D = %Lock
 @onready var door: Sprite2D = %Door
 
 var world_stats: WorldStats = preload("res://Resources/world_stats.tres")
@@ -20,6 +20,7 @@ func _ready() -> void:
 		door.flip_h = true
 	else:
 		door.flip_h = false
+	lock_sprite.frame = lock
 
 var is_activatable := false:
 	set(value):

@@ -45,9 +45,9 @@ scroll_active = false
 autowrap_mode = 0
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="."]
-offset_top = 165.0
+offset_top = 190.0
 offset_right = 160.0
-offset_bottom = 182.0
+offset_bottom = 207.0
 scale = Vector2(4, 4)
 alignment = 1
 

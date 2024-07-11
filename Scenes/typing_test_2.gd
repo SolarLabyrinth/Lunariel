@@ -11,7 +11,7 @@ var world_stats: WorldStats = preload("res://Resources/world_stats.tres")
 
 var wpm := world_stats.current_wpm
 var xp_value := world_stats.current_xp
-var test_text := world_stats.current_text
+var test_text := "test" #world_stats.current_text
 
 var running := false
 var already_typed := ""
@@ -61,6 +61,11 @@ func _process(delta: float) -> void:
 		set_hourglass_frame()
 		set_time_display(time_remaining)
 	if time_remaining <= 0:
+		world_stats.last_xp_level = world_stats.current_level
+		world_stats.last_xp_x = world_stats.player_x
+		world_stats.last_xp_value = player_data.xp
+
+		player_data.xp = 0
 		SceneManager.go_back_to_previous_grace()
 		world_stats.reset_enemies()
 

@@ -13,6 +13,10 @@ class_name WorldStats extends Resource
 @export var current_xp := 1
 @export var current_text := "test"
 
+@export var last_xp_level := 0
+@export var last_xp_x := 0.0
+@export var last_xp_value := 0
+
 @export var keys := {
     1: false,
     2: false,
