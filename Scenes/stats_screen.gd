@@ -22,15 +22,15 @@ func update_ui():
 	regen_value.text = str(player_data.stamina_regen)
 	xp_value.text = str(player_data.xp)
 	levelvalue.text = str(player_data.level)
-	if player_data.xp >= player_data.wpm_adjustment:
+	if player_data.xp >= player_data.wpm_adjustment and player_data.wpm_adjustment < 9:
 		%SpeedAddButton.show()
 	else:
 		%SpeedAddButton.hide()
-	if player_data.xp >= player_data.stamina_amount:
+	if player_data.xp >= player_data.stamina_amount and player_data.stamina_amount < 9:
 		%StaminaAddButton.show()
 	else:
 		%StaminaAddButton.hide()
-	if player_data.xp >= player_data.stamina_regen:
+	if player_data.xp >= player_data.stamina_regen and player_data.stamina_regen < 9:
 		%RegenAddButton.show()
 	else:
 		%RegenAddButton.hide()
