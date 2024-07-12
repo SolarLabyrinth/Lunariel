@@ -1,13 +1,15 @@
-[gd_scene load_steps=2 format=3 uid="uid://kbotl7s72ijm"]
+[gd_scene load_steps=3 format=3 uid="uid://kbotl7s72ijm"]
 
+[ext_resource type="Script" path="res://Scenes/win.gd" id="1_41cdi"]
 [ext_resource type="Theme" uid="uid://bahunhngepcwh" path="res://Resources/ui-theme.tres" id="1_i63ap"]
 
 [node name="Win" type="Node2D"]
+script = ExtResource("1_41cdi")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
-offset_top = 73.0
+offset_top = 45.0
 offset_right = 640.0
-offset_bottom = 165.0
+offset_bottom = 137.0
 alignment = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
@@ -25,9 +27,9 @@ scroll_active = false
 autowrap_mode = 0
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="."]
-offset_top = 173.0
+offset_top = 141.0
 offset_right = 640.0
-offset_bottom = 265.0
+offset_bottom = 233.0
 alignment = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer2"]
@@ -41,6 +43,27 @@ theme_override_font_sizes/normal_font_size = 24
 bbcode_enabled = true
 text = "[center]You did it
 The Game is over now"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="."]
+offset_top = 234.0
+offset_right = 640.0
+offset_bottom = 326.0
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer3"]
+layout_mode = 2
+alignment = 1
+
+[node name="Level" type="RichTextLabel" parent="HBoxContainer3/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("1_i63ap")
+theme_override_font_sizes/normal_font_size = 24
+bbcode_enabled = true
+text = "[center]You were Level: 1"
 fit_content = true
 scroll_active = false
 autowrap_mode = 0
