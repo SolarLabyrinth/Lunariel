@@ -36,7 +36,8 @@ var total_time = time_remaining
 		return stamina
 		
 func calc_test_time():
-	var final_wpm: float = wpm - (5 * player_data.wpm_adjustment)
+	# RIP Ani
+	var final_wpm: float = (wpm * 2) - (5 * player_data.wpm_adjustment)
 	print(final_wpm)
 	return 60.0 * (test_text.length() / 5.0 / final_wpm) + 1
 func set_time_display(value: float):
